@@ -1,1 +1,498 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="theme-color" content="#003B6F"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="TARDIS"/>
+<link rel="manifest" href="./manifest.json"/>
+<link rel="apple-touch-icon" href="./icon.svg">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzJkNGM2NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFhMzU0OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPjxyZWN0IHg9IjQ1IiB5PSI1IiB3aWR0aD0iMTAiIGhlaWdodD0iNCIgZmlsbD0iIzI4NTBhMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxyZWN0IHg9IjQ3LjUiIHk9IjMiIHdpZHRoPSI1IiBoZWlnaHQ9IjIiIGZpbGw9IiNmZmNjMDAiLz48cmVjdCB4PSIzNSIgeT0iOS41IiB3aWR0aD0iMzAiIGhlaWdodD0iNyIgZmlsbD0iIzAwMTUzMyIvPjx0ZXh0IHg9IjUwIiB5PSIxNC41IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBPTElDRSBCT1g8L3RleHQ+PHJlY3QgeD0iMzAiIHk9IjE2LjUiIHdpZHRoPSI0MCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48cmVjdCB4PSIzNCIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0NSIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI1NiIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSIzNCIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0NSIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI1NiIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0MCIgeT0iNTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyOCIgZmlsbD0iIzhhOGE3NSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48cmVjdCB4PSI0MiIgeT0iNTIiIHdpZHRoPSI3IiBoZWlnaHQ9IjI0IiBmaWxsPSIjNzA3MDYwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMC41Ii8+PHJlY3QgeD0iNTEiIHk9IjUyIiB3aWR0aD0iNyIgaGVpZ2h0PSIyNCIgZmlsbD0iIzcwNzA2MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxyZWN0IHg9IjMwIiB5PSI4MC41IiB3aWR0aD0iNDAiIGhlaWdodD0iNiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==" type="image/svg+xml"/>
+<title>Dr. Way's T.A.R.D.I.S.</title>   
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#f0f2f5;min-height:100vh}button{cursor:pointer;font-family:inherit}input,select,textarea{font-family:inherit;border:1px solid #ccc;border-radius:6px;padding:6px 10px;font-size:14px;width:100%}textarea{resize:vertical}
+.B{border-radius:8px;padding:8px 16px;font-size:14px;font-weight:600;border:2px solid transparent;cursor:pointer}.Bs{padding:4px 10px;font-size:12px;border-radius:8px;font-weight:600;border:2px solid transparent;cursor:pointer}
+.Bp{background:#003B6F;color:#fff}.Bd{background:#c0392b;color:#fff}.Bo{background:transparent;color:#003B6F;border-color:#003B6F}.Bg{background:#27ae60;color:#fff}
+.C{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:12px}
+.badge{border-radius:20px;padding:2px 8px;font-size:11px;font-weight:700;margin-left:4px;display:inline-block;color:#fff}
+.M{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px}.Mb{background:#fff;border-radius:16px;padding:20px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
+.T{background:#fff;border-bottom:2px solid #eee;overflow-x:auto;display:flex;white-space:nowrap}.Ti{padding:8px 10px;background:none;border:none;border-bottom:3px solid transparent;color:#666;cursor:pointer;font-weight:400;font-size:11px;display:inline-flex;flex-direction:column;align-items:center;gap:2px;min-width:48px}.Ti.a{color:#003B6F;border-bottom-color:#003B6F;font-weight:700}
+.S{display:flex;gap:4px;margin-bottom:12px;overflow-x:auto;padding-bottom:2px}.Si{padding:6px 12px;border-radius:8px;border:none;background:#eee;color:#333;cursor:pointer;font-weight:700;font-size:12px;white-space:nowrap}.Si.a{background:#003B6F;color:#fff}
+.H{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:6px}.H h3{margin:0;font-size:16px;color:#003B6F}.Ha{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.fl{font-size:12px;display:block;margin-bottom:2px;color:#555}
+.ep{font-size:10px;border-radius:4px;padding:2px 6px;margin-bottom:2px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;color:#fff}
+.pb{background:#eee;border-radius:99px;height:8px;overflow:hidden}.pf{height:100%;border-radius:99px}
+.kw{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}.kc{min-width:160px;flex:0 0 160px;background:#f0f4ff;border-radius:8px;padding:8px}
+.hcol{display:flex;flex-direction:column;flex:1;min-width:80px;border-right:1px solid #eee}.hcol:last-child{border-right:none}
+#ct{max-width:640px;margin:0 auto;padding:14px 12px}
+.drag-over{outline:2px dashed #003B6F;outline-offset:-2px}.dragging{opacity:.4}
+.install-prompt{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#003B6F;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.3);display:none;z-index:2000;align-items:center;gap:12px}.install-prompt.show{display:flex}
+.editable{cursor:pointer;padding:2px 4px;border-radius:4px;transition:background 0.2s}.editable:hover{background:#f0f4ff}
+#voiceBtn{position:fixed;bottom:80px;right:20px;width:56px;height:56px;border-radius:50%;background:#003B6F;color:#fff;border:none;font-size:24px;cursor:pointer;box-shadow:0 4px 14px rgba(0,59,111,.5);z-index:1500;display:flex;align-items:center;justify-content:center;transition:all .2s}
+#voiceBtn.listening{background:#e74c3c;animation:pulse 1s infinite}
+#voiceBtn.processing{background:#f39c12}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 4px 14px rgba(231,76,60,.5)}50%{transform:scale(1.1);box-shadow:0 6px 20px rgba(231,76,60,.7)}}
+#voicePanel{position:fixed;bottom:148px;right:20px;background:#fff;border-radius:16px;padding:16px;width:300px;max-width:90vw;box-shadow:0 8px 30px rgba(0,0,0,.15);z-index:1500;display:none;flex-direction:column;gap:10px}
+#voicePanel.show{display:flex}
+#voiceTranscript{background:#f0f4ff;border-radius:8px;padding:10px;font-size:13px;color:#333;min-height:48px;max-height:120px;overflow-y:auto;border:1px solid #dde4ff}
+#voiceResult{background:#f0fff4;border-radius:8px;padding:10px;font-size:13px;color:#27ae60;min-height:36px;display:none}
+#voiceStatus{font-size:11px;color:#888;text-align:center}
+#voiceHelpBtn{font-size:11px;color:#003B6F;background:none;border:none;cursor:pointer;text-decoration:underline;text-align:center}
+</style></head><body><div id="root"></div>
+<div id="installPrompt" class="install-prompt">
+  <span>Install TARDIS as an app?</span>
+  <button onclick="installPWA()" style="background:#fff;color:#003B6F;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;font-weight:600">Install</button>
+  <button onclick="dismissInstall()" style="background:transparent;color:#fff;border:1px solid #fff;padding:6px 12px;border-radius:6px;cursor:pointer">Later</button>
+</div>
 
+<div id="voicePanel">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <strong style="color:#003B6F;font-size:14px">🎙️ Voice Assistant</strong>
+    <button onclick="closeVoicePanel()" style="background:none;border:none;font-size:18px;cursor:pointer;color:#666">✕</button>
+  </div>
+  <div id="voiceTranscript">Say something like:<br><em>"Add task buy milk"</em><br><em>"Add grocery eggs"</em><br><em>"Log workout run 30 minutes"</em><br><em>"Add note to journal feeling great today"</em></div>
+  <div id="voiceResult"></div>
+  <div id="voiceStatus">Tap 🎙️ to start speaking</div>
+  <button id="voiceHelpBtn" onclick="showVoiceHelp()">Show all voice commands</button>
+</div>
+<button id="voiceBtn" onclick="toggleVoice()" title="Voice Assistant">🎙️</button>
+
+<script>
+// ── PWA: Register Service Worker ─────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(r => console.log('SW registered', r.scope))
+    .catch(e => console.warn('SW failed:', e));
+}
+
+const P="#003B6F",PL="#004F9A",GL="#C9A84C",TD=new Date().toISOString().slice(0,10),uid=()=>Math.random().toString(36).slice(2,9),fmt=d=>d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"",fm$=n=>"$"+Number(n||0).toFixed(2);
+const BK=["Personal","Way Forged LLC","CLO Work","Home","Athletics","Blacksmith","Row & Throw","Learning","Pets"],PR=["High","Medium","Low"],ST=["Not Started","In Progress","On Hold","Waiting","Review","Complete"],RC=["None","Daily","Weekdays","Weekly","Biweekly","Monthly"],WT=["Walk","Run","Swim","Lift","Erg","Row","Throw","Yoga","HIIT","Other"];
+const PC={High:"#e74c3c",Medium:"#f39c12",Low:"#27ae60"},BC={"Personal":"#6c63ff","Way Forged LLC":GL,"CLO Work":"#2980b9","Home":"#27ae60","Athletics":"#e67e22","Blacksmith":"#7f8c8d","Row & Throw":"#16a085","Learning":"#8e44ad","Pets":"#e91e8c"};
+// ── Crypto helpers ────────────────────────────────────────────────────────────
+async function hashPw(pw){
+  const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(pw));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function deriveKey(pw,saltHex){
+  const salt=new Uint8Array(saltHex.match(/.{2}/g).map(b=>parseInt(b,16)));
+  const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),{name:'PBKDF2'},false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:100000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);
+}
+function randHex(n){return Array.from(crypto.getRandomValues(new Uint8Array(n))).map(b=>b.toString(16).padStart(2,'0')).join('');}
+async function enc(plaintext,pw){
+  try{
+    const salt=randHex(16),iv=randHex(12);
+    const key=await deriveKey(pw,salt);
+    const ct=await crypto.subtle.encrypt({name:'AES-GCM',iv:new Uint8Array(iv.match(/.{2}/g).map(b=>parseInt(b,16)))},key,new TextEncoder().encode(plaintext));
+    return salt+'|'+iv+'|'+btoa(String.fromCharCode(...new Uint8Array(ct)));
+  }catch{return'';}
+}
+async function dec(ciphertext,pw){
+  try{
+    const[salt,iv,ct]=ciphertext.split('|');
+    if(!salt||!iv||!ct)return'';
+    const key=await deriveKey(pw,salt);
+    const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:new Uint8Array(iv.match(/.{2}/g).map(b=>parseInt(b,16)))},key,Uint8Array.from(atob(ct),c=>c.charCodeAt(0)));
+    return new TextDecoder().decode(pt);
+  }catch{return'';}
+}
+const ms={},st={async get(k){try{if(window.storage){const r=await window.storage.get(k);return r?JSON.parse(r.value):null;}}catch{}return ms[k]??null;},async set(k,v){try{if(window.storage)await window.storage.set(k,JSON.stringify(v));}catch{}ms[k]=v;}};
+const DCLO=[{id:"c1",name:"Teaching Dates & Programs",poc:"",tasks:[],subs:[]},{id:"c2",name:"Cindy Tasks - T&A",poc:"",tasks:[],subs:[]},{id:"c3",name:"Cindy Tasks - Maxiflex",poc:"",tasks:[],subs:[]},{id:"c4",name:"Cindy Tasks - Leadership Notes",poc:"",tasks:[],subs:[]},{id:"c5",name:"Strategy",poc:"",tasks:[],subs:[]},{id:"c6",name:"Team Reminders",poc:"",tasks:[],subs:[]},{id:"c7",name:"Notes for Ldr Meetings",poc:"",tasks:[],subs:[]},{id:"c8",name:"Team To Do",poc:"",tasks:[],subs:[]},{id:"c9",name:"Performance Mgmt",poc:"",tasks:[],subs:[],desc:"Quarterly Reviews & Bell Curve"},{id:"c10",name:"Leader Dev - Programs",poc:"",tasks:[],subs:[],desc:"SUTS, SLP, Coaching, LLMP, Progression, SF182, Fed Talent, Mandatory Training, LEAP/LEAG, WHLDP"},{id:"c11",name:"Data & Assessments - NTNA",poc:"",tasks:[],subs:[]}];
+const ACRS=["Coaching","Weight Class","Social Media","Races","Highland Games - Dates","Highland Games - Throw Tips"];
+const DFLT_HCK=[{id:"hc1",text:"Have wallet, keys, phone",done:0},{id:"hc2",text:"Oven is off",done:0},{id:"hc3",text:"Windows are closed",done:0},{id:"hc4",text:"Doors locked",done:0},{id:"hc5",text:"Door downstairs is locked",done:0},{id:"hc6",text:"Animals in the house and safe",done:0},{id:"hc7",text:"Animals have plenty of water",done:0},{id:"hc8",text:"Forge is cold and off",done:0},{id:"hc9",text:"Temperature in the house is OK or changed as needed",done:0},{id:"hc10",text:"Spare key is in the dropbox and accessible",done:0}];
+
+let S={unlocked:0,pw:"",tab:"today",tasks:[],rec:[],settings:{deviceName:"MyDevice"},calEv:[],icsEv:[],cloCats:null,wfP:[],exp:{personal:[],wayForged:[]},inc:{personal:0,wayForged:0},jour:[],rGear:["Oar","Life Jacket","Water Bottle","Seat Pad","Gloves","Sunscreen","Change of Clothes","Racing Shirts","Trunk Trunks","Water","Sunscreen & Bug Spray","Shoes","Snack","Electrolytes","A Book","Video Camera & Batteries","Phone Charger","Biofreeze"],tGear:["Hammer","Weight for Distance","Sheaf","Caber","Braemar Stone","Open Stone","Javelin","Discus","Athletic Shoes","Kilt/Outfit"],acr:null,bsG:["Hammer","Cross Peen","Tongs","Anvil","Apron","Face Shield","Gloves","Coal/Gas","Quench Bucket"],bsP:[],bsPdf:[],pets:[{id:"pw",name:"Wilbur",tr:[],ap:[],gm:[]},{id:"ps",name:"Simba",tr:[],ap:[],gm:[]}],meals:[],wk:[],swk:[],gM:[],lP:[],subs:[{id:"s1",name:"Simba Food"},{id:"s2",name:"Wilbur Food"},{id:"s3",name:"Transparent Labs"},{id:"s4",name:"Humm Nutrition"},{id:"s5",name:"Kaged"},{id:"s6",name:"Dropps"}],bills:[],maint:[],rem:[],creds:{},houseCk:null,homeLinks:[],lastBillReset:"",morningCk:[],eveningCk:[],
+cloLinks:[],wfLinks:[],rowLinks:[],throwLinks:[],bsLinks:[],learnLinks:[],petLinks:[],
+u:{ts:"tasks",cc:TD,tf:"All",cv:"dash",cx:null,wx:null,bt:"personal",sf:"All",rs:"gear",tw:"gear",bss:"checklist",bsx:null,pa:"pw",ps:"training",hs:"nutrition",lf:"All",ht:"bills",sc:0,ae:{},wk:"clo",lk:"grocery",sk:"rowing",mk:"learning",bf:"All",calView:"week"}};
+
+const KS=["tasks","rec","settings","calEv","icsEv","cloCats","wfP","exp","inc","jour","rGear","tGear","acr","bsG","bsP","bsPdf","pets","meals","wk","swk","gM","lP","subs","bills","maint","rem","pw","creds","houseCk","homeLinks","lastBillReset","morningCk","eveningCk","cloLinks","wfLinks","rowLinks","throwLinks","bsLinks","learnLinks","petLinks"];
+let dragIdx=null;
+
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt',(e)=>{e.preventDefault();deferredPrompt=e;const prompt=document.getElementById('installPrompt');if(prompt&&!localStorage.getItem('installDismissed')){prompt.classList.add('show');}});
+function installPWA(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('installPrompt').classList.remove('show');});}else{alert('App already installed or install not available');}}
+function dismissInstall(){document.getElementById('installPrompt').classList.remove('show');localStorage.setItem('installDismissed','true');}
+window.addEventListener('appinstalled',()=>{deferredPrompt=null;});
+
+// ── Voice Assistant ───────────────────────────────────────────────────────────
+let voiceRec=null,voiceListening=false,voicePanelOpen=false,voiceSilenceTimer=null,voiceFinalText='';
+const VOICE_SILENCE_MS=2000;
+
+function closeVoicePanel(){voicePanelOpen=false;document.getElementById('voicePanel').classList.remove('show');if(voiceListening)stopVoice();}
+function toggleVoice(){if(!voicePanelOpen){voicePanelOpen=true;document.getElementById('voicePanel').classList.add('show');setVoiceStatus('Tap 🎙️ to start speaking');}if(voiceListening){stopVoice();}else{startVoice();}}
+
+function startVoice(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){setVoiceStatus('❌ Speech recognition not supported. Try Chrome/Edge.');return;}
+  voiceRec=new SR();voiceRec.continuous=true;voiceRec.interimResults=true;voiceRec.lang='en-US';
+  const btn=document.getElementById('voiceBtn'),tr=document.getElementById('voiceTranscript'),rs=document.getElementById('voiceResult');
+  rs.style.display='none';tr.textContent='🎙️ Listening… (pause when done)';
+  voiceFinalText='';
+  if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+
+  voiceRec.onresult=e=>{
+    let interim='',final='';
+    for(let i=0;i<e.results.length;i++){
+      if(e.results[i].isFinal)final+=e.results[i][0].transcript+' ';
+      else interim+=e.results[i][0].transcript;
+    }
+    if(final)voiceFinalText=final.trim();
+    tr.textContent=(voiceFinalText||(interim||'🎙️ Listening…'));
+    if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+    if(voiceFinalText||interim){
+      voiceSilenceTimer=setTimeout(()=>{
+        if(voiceListening){setVoiceStatus('✋ Paused – submitting…');stopVoice();}
+      },VOICE_SILENCE_MS);
+    }
+  };
+
+  voiceRec.onend=()=>{
+    voiceListening=false;
+    btn.classList.remove('listening');btn.textContent='🎙️';
+    if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+    const spoken=(voiceFinalText||document.getElementById('voiceTranscript').textContent).trim();
+    if(spoken&&spoken!=='🎙️ Listening… (pause when done)'&&spoken!=='🎙️ Listening…'){
+      btn.classList.add('processing');btn.textContent='⏳';
+      setVoiceStatus('Processing…');
+      processVoiceCommand(spoken);
+    }else{setVoiceStatus('Nothing heard. Tap 🎙️ to try again.');}
+  };
+
+  voiceRec.onerror=err=>{
+    if(err.error==='no-speech')return;
+    voiceListening=false;btn.classList.remove('listening');btn.textContent='🎙️';
+    setVoiceStatus('❌ Error: '+err.error+'. Tap to retry.');
+  };
+
+  voiceRec.start();voiceListening=true;
+  btn.classList.add('listening');btn.textContent='⏹️';
+  setVoiceStatus('🎙️ Listening… speak, then pause 2s');
+}
+
+function stopVoice(){
+  if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+  if(voiceRec)try{voiceRec.stop();}catch(e){}
+  voiceListening=false;
+  const btn=document.getElementById('voiceBtn');
+  btn.classList.remove('listening');btn.textContent='🎙️';
+}
+
+function setVoiceStatus(msg){const el=document.getElementById('voiceStatus');if(el)el.textContent=msg;}
+function showVoiceResult(msg,ok=true){
+  const rs=document.getElementById('voiceResult');
+  rs.style.display='block';rs.style.background=ok?'#f0fff4':'#fff0f0';rs.style.color=ok?'#27ae60':'#e74c3c';rs.textContent=msg;
+  document.getElementById('voiceBtn').classList.remove('processing');document.getElementById('voiceBtn').textContent='🎙️';
+  setVoiceStatus('Tap 🎙️ to speak again');
+}
+
+function voiceConfirm(summary,fields,onConfirm){
+  let _saved=false;
+  const rs=document.getElementById('voiceResult');
+  rs.style.display='block';rs.style.background='#fff8e1';rs.style.color='#555';
+  rs.innerHTML='';
+  const title=document.createElement('div');title.style.cssText='font-weight:700;margin-bottom:6px;color:#003B6F';title.textContent='Ready to save:';rs.appendChild(title);
+  const fieldEls={};
+  fields.forEach(f=>{
+    const row=document.createElement('div');row.style.cssText='display:flex;gap:6px;align-items:center;margin-bottom:4px';
+    const lbl=document.createElement('label');lbl.style.cssText='font-size:11px;color:#888;min-width:64px';lbl.textContent=f.label+':';
+    let inp;
+    if(f.type==='select'){
+      inp=document.createElement('select');inp.style.cssText='flex:1;font-size:12px;padding:2px 4px;border:1px solid #ccc;border-radius:4px';
+      (f.options||[]).forEach(o=>{const op=document.createElement('option');op.value=o;op.textContent=o;if(o===f.value)op.selected=true;inp.appendChild(op);});
+    }else{
+      inp=document.createElement('input');inp.type=f.type||'text';inp.style.cssText='flex:1;font-size:12px;padding:2px 4px;border:1px solid #ccc;border-radius:4px';inp.value=f.value||'';inp.placeholder=f.placeholder||'';
+    }
+    fieldEls[f.key]=inp;
+    row.appendChild(lbl);row.appendChild(inp);rs.appendChild(row);
+  });
+  const btns=document.createElement('div');btns.style.cssText='display:flex;gap:8px;margin-top:8px';
+  const saveBtn=document.createElement('button');saveBtn.textContent='✅ Save';saveBtn.style.cssText='flex:1;padding:6px;background:#003B6F;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:700;font-size:13px';
+  const cancelBtn=document.createElement('button');cancelBtn.textContent='✕ Cancel';cancelBtn.style.cssText='padding:6px 10px;background:#eee;color:#333;border:none;border-radius:6px;cursor:pointer;font-size:13px';
+  const retryBtn=document.createElement('button');retryBtn.textContent='🎙️ Redo';retryBtn.style.cssText='padding:6px 10px;background:#f0f4ff;color:#003B6F;border:1px solid #003B6F;border-radius:6px;cursor:pointer;font-size:13px';
+  saveBtn.onclick=()=>{
+    if(_saved)return;_saved=true;
+    const vals={};fields.forEach(f=>{vals[f.key]=fieldEls[f.key].value;});
+    rs.style.display='none';
+    setVoiceStatus('Tap 🎙️ to speak again');
+    onConfirm(vals);
+  };
+  cancelBtn.onclick=()=>{rs.style.display='none';setVoiceStatus('Cancelled. Tap 🎙️ to try again.');};
+  retryBtn.onclick=()=>{rs.style.display='none';startVoice();};
+  btns.appendChild(saveBtn);btns.appendChild(retryBtn);btns.appendChild(cancelBtn);
+  rs.appendChild(btns);
+  setVoiceStatus('Review & edit below, then Save');
+}
+
+function cleanSpeech(raw){
+  return raw
+    .replace(/\b(um+|uh+|er+|ah+|like|so|well|okay|ok|right|you know|actually|basically|literally)\b[\s,.]*/gi,'')
+    .replace(/^(i need (a|an|to)|i want (a|an|to)|i'd like (a|an|to)|can you|could you|please|hey|hi|create me|make me|give me|set up|set me up with|put in|put a|add a|add an|schedule a|schedule me|schedule an|log a|log an|record a|new a|new an)\s+/i,'')
+    .replace(/\s{2,}/g,' ').trim();
+}
+
+function parseSpokenDate(s){
+  if(!s)return null;
+  s=s.toLowerCase().trim();
+  const today=new Date();
+  if(/^today$/.test(s))return TD;
+  if(/^tomorrow$/.test(s)){const d=new Date(today);d.setDate(d.getDate()+1);return d.toISOString().slice(0,10);}
+  if(/^yesterday$/.test(s)){const d=new Date(today);d.setDate(d.getDate()-1);return d.toISOString().slice(0,10);}
+  const DAYS=['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+  const nd=s.match(/^(?:next\s+)?(sunday|monday|tuesday|wednesday|thursday|friday|saturday)$/);
+  if(nd){const target=DAYS.indexOf(nd[1]);const cur=today.getDay();let diff=target-cur;if(diff<=0)diff+=7;const d=new Date(today);d.setDate(d.getDate()+diff);return d.toISOString().slice(0,10);}
+  const inD=s.match(/^in\s+(\d+)\s+days?$/);
+  if(inD){const d=new Date(today);d.setDate(d.getDate()+parseInt(inD[1]));return d.toISOString().slice(0,10);}
+  const MONTHS=['january','february','march','april','may','june','july','august','september','october','november','december'];
+  const md=s.match(/^(january|february|march|april|may|june|july|august|september|october|november|december)\s+(\d{1,2})(?:st|nd|rd|th)?$/);
+  if(md){const m=MONTHS.indexOf(md[1]);const d=new Date(today.getFullYear(),m,parseInt(md[2]));if(d<today)d.setFullYear(d.getFullYear()+1);return d.toISOString().slice(0,10);}
+  const bare=s.match(/^(\d{1,2})[\/\-](\d{1,2})$/);
+  if(bare){const d=new Date(today.getFullYear(),parseInt(bare[1])-1,parseInt(bare[2]));if(d<today)d.setFullYear(d.getFullYear()+1);return d.toISOString().slice(0,10);}
+  return null;
+}
+function parseSpokenTime(s){
+  if(!s)return'';
+  s=s.toLowerCase().trim();
+  if(s==='noon')return'12:00';if(s==='midnight')return'00:00';
+  const t12=s.match(/^(\d{1,2})(?::(\d{2}))?\s*(am|pm)$/);
+  if(t12){let h=parseInt(t12[1]),m=parseInt(t12[2]||0);if(t12[3]==='pm'&&h!==12)h+=12;if(t12[3]==='am'&&h===12)h=0;return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');}
+  const t24=s.match(/^(\d{1,2}):(\d{2})$/);
+  if(t24)return String(parseInt(t24[1])).padStart(2,'0')+':'+t24[2];
+  const W={one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12,thirty:30,fifteen:15,forty:40};
+  const sp=s.match(/^(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)(?:\s+(thirty|fifteen|forty(?:\s*five)?))?(?:\s+(am|pm))$/);
+  if(sp){let h=W[sp[1]]||0,m=sp[2]?(W[sp[2].replace(/\s/,'')]||45):0;if(sp[3]==='pm'&&h!==12)h+=12;if(sp[3]==='am'&&h===12)h=0;return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');}
+  return'';
+}
+function extractDatetime(raw){
+  let date='',time='';
+  const dm=raw.match(/\b(?:on\s+|for\s+)?(today|tomorrow|yesterday|next\s+(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)|monday|tuesday|wednesday|thursday|friday|saturday|sunday|january|february|march|april|may|june|july|august|september|october|november|december\s+\d{1,2}(?:st|nd|rd|th)?|\d{1,2}[\/\-]\d{1,2})\b/i);
+  if(dm)date=parseSpokenDate(dm[1])||'';
+  const tm=raw.match(/\bat\s+(noon|midnight|\d{1,2}(?::\d{2})?\s*(?:am|pm)|(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)(?:\s+(?:thirty|fifteen|forty(?:\s*five)))?\s*(?:am|pm))/i);
+  if(tm)time=parseSpokenTime(tm[1])||'';
+  return{date,time};
+}
+function stripDatetime(s){
+  return s
+    .replace(/\b(?:on\s+|for\s+)?(?:today|tomorrow|yesterday|next\s+(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)|monday|tuesday|wednesday|thursday|friday|saturday|sunday|january|february|march|april|may|june|july|august|september|october|november|december\s+\d{1,2}(?:st|nd|rd|th)?)\b/gi,'')
+    .replace(/\bat\s+(?:noon|midnight|\d{1,2}(?::\d{2})?\s*(?:am|pm)?)/gi,'')
+    .replace(/\s{2,}/g,' ').trim().replace(/[,.]$/,'').trim();
+}
+function inferBucket(s){
+  const t=s.toLowerCase();
+  if(/\b(clo|work|office|federal|government|team|staff|leadership|cindy|maxiflex)\b/.test(t))return'CLO Work';
+  if(/\b(way forged|wayforged|business|client|invoice|contract)\b/.test(t))return'Way Forged LLC';
+  if(/\b(blacksmith|forge|anvil|weld|iron|smith)\b/.test(t))return'Blacksmith';
+  if(/\b(row|rowing|erg|paddle|boat|regatta|race)\b/.test(t))return'Row & Throw';
+  if(/\b(throw|throwing|highland|hammer|caber|stone|games|athletics|workout|lift|run|swim|walk)\b/.test(t))return'Athletics';
+  if(/\b(wilbur|simba|pet|dog|cat|vet|puppy|kitten|training|treat)\b/.test(t))return'Pets';
+  if(/\b(home|house|yard|garage|kitchen|repair|maintenance|bill|grocery|groceries)\b/.test(t))return'Home';
+  if(/\b(learn|study|journal|book|article|class|course|read|language)\b/.test(t))return'Learning';
+  return'Personal';
+}
+function detectIntent(t){
+  if(/\b(calendar|event|invite|meeting|appointment|appt|schedule|on my calendar)\b/.test(t))return'event';
+  if(/\b(remind|reminder|don't forget|make sure i|alert)\b/.test(t))return'reminder';
+  if(/\b(grocery|groceries|shopping list|shopping|store|pick up|need to (buy|get)|buy some|get some)\b/.test(t))return'grocery';
+  if(/\b(journal|diary|story|reflect|wrote|feeling|thoughts|log (that|how)|note (that|how))\b/.test(t))return'journal';
+  if(/\b(workout|exercise|ran|run|lift|swim|row|erg|walked|yoga|hiit)\b/.test(t))return'workout';
+  if(/\b(meal|ate|eating|food|breakfast|lunch|dinner|snack|calories|protein)\b/.test(t))return'meal';
+  if(/\b(fix|repair|maintenance|broken|replace|install|clean)\b/.test(t))return'maintenance';
+  if(/\b(morning (checklist|routine|check))\b/.test(t))return'morning';
+  if(/\b(evening (checklist|routine|check))\b/.test(t))return'evening';
+  if(/\b(go to|open|show|take me to|navigate)\b/.test(t))return'navigate';
+  if(/\b(task|todo|to.do|to do|don't forget to|need to|have to|must)\b/.test(t))return'task';
+  return'task';
+}
+function extractTitle(clean,intent){
+  let s=clean;
+  const removes={
+    event:[/\b(calendar (invite|event)?|event|invite|meeting|appointment|appt|on (the |my )?calendar)\b/gi],
+    task:[/\b(task|to.?do|need to|have to|must|don'?t forget to)\b/gi],
+    reminder:[/\b(remind(er)?|don'?t forget|make sure i|alert)\b/gi],
+    grocery:[/\b(grocery|groceries|shopping (list)?|pick up|buy|get)\b/gi],
+    journal:[/\b(journal (entry)?|diary|story|log that|note that|reflect(ion)?)\b/gi],
+    workout:[/\b(log(ged)?|record(ed)?|workout|exercise|did a|went for (a )?)\b/gi],
+    meal:[/\b(log(ged)?|ate|eating|had|meal|food)\b/gi],
+    maintenance:[/\b(fix|repair|maintenance|need to|have to)\b/gi],
+    morning:[/\b(morning (checklist|routine|check)|add to morning)\b/gi],
+    evening:[/\b(evening (checklist|routine|check)|add to evening)\b/gi],
+  };
+  (removes[intent]||[]).forEach(re=>s=s.replace(re,''));
+  s=s.replace(/\b(under|in the?|for the?|to the?|into the?)\s+(pets?|home|work|clo|athletics|blacksmith|learning|personal|way forged|grocery|calendar|training|rowing|throwing)\s*(section|tab|area|category)?\b/gi,'');
+  s=stripDatetime(s);
+  return s.replace(/\s{2,}/g,' ').trim().replace(/^[,.\-–]\s*/,'').trim();
+}
+
+function processVoiceCommand(rawInput){
+  const raw=rawInput.trim();
+  const cleaned=cleanSpeech(raw);
+  const t=cleaned.toLowerCase();
+  const{date:spokenDate,time:spokenTime}=extractDatetime(raw);
+  const bucket=inferBucket(raw);
+  const intent=detectIntent(t);
+
+  const navMap={today:"today",tasks:"today",calendar:"today",work:"work",clo:"work","way forged":"work",life:"life",grocery:"life",pets:"life",budget:"life",home:"life",shehulk:"shehulk","she hulk":"shehulk",rowing:"shehulk",throwing:"shehulk",athletics:"shehulk",mind:"mind",learning:"mind",journal:"mind",stories:"mind",blacksmith:"blacksmith",settings:"settings"};
+  if(intent==='navigate'){
+    const nm=t.match(/(?:go to|open|show|take me to|navigate(?:\s+to)?)\s+(.+)/i);
+    if(nm){const dest=nm[1].trim().toLowerCase().replace(/\s+/g,' ');const tab=navMap[dest]||navMap[Object.keys(navMap).find(k=>dest.includes(k))||''];if(tab){S.tab=tab;sv();R();showVoiceResult('✅ Navigated to '+nm[1]);return;}}
+  }
+
+  const paidMatch=raw.match(/\b(?:mark|set)\s+(.+?)\s+(?:as\s+)?paid\b/i)||raw.match(/\bpay(?:ed|ing)?\s+(?:the\s+)?(.+?)\s+bill\b/i);
+  if(paidMatch){const bname=paidMatch[1].trim().toLowerCase();const bill=(S.bills||[]).find(b=>b.n.toLowerCase().includes(bname));if(bill){bill.paid=1;sv();R();showVoiceResult('✅ Marked as paid: '+bill.n);return;}else{showVoiceResult('❌ Bill not found matching "'+paidMatch[1]+'". Check spelling.',false);return;}}
+
+  if(intent==='event'){
+    const title=extractTitle(cleaned,'event')||'New Event';
+    const petMatch=raw.match(/\bfor\s+(wilbur|simba)\b/i);
+    const finalBucket=petMatch?'Pets':bucket;
+    voiceConfirm('Add Calendar Event',[
+      {key:'title',label:'Title',value:title},
+      {key:'date',label:'Date',type:'date',value:spokenDate||TD},
+      {key:'time',label:'Time',type:'time',value:spokenTime},
+      {key:'bucket',label:'Section',type:'select',options:BK,value:finalBucket},
+    ],(vals)=>{S.calEv.push({id:uid(),title:vals.title,date:vals.date,time:vals.time,endTime:"",bucket:vals.bucket,notes:""});sv();R();showVoiceResult('✅ Event added: "'+vals.title+'"');});
+    return;
+  }
+  if(intent==='reminder'){
+    const title=extractTitle(cleaned,'reminder')||'Reminder';
+    voiceConfirm('Add Reminder',[
+      {key:'text',label:'Reminder',value:title},
+      {key:'date',label:'Date',type:'date',value:spokenDate||TD},
+    ],(vals)=>{S.rem.push({id:uid(),text:vals.text,date:vals.date,created:TD});sv();R();showVoiceResult('✅ Reminder added: "'+vals.text+'"');});
+    return;
+  }
+  if(intent==='grocery'){
+    const item=extractTitle(cleaned,'grocery')||cleaned;
+    voiceConfirm('Add to Grocery List',[{key:'text',label:'Item',value:item}],(vals)=>{S.gM.push({id:uid(),text:vals.text,ck:0});sv();R();showVoiceResult('✅ Added to grocery list: "'+vals.text+'"');});
+    return;
+  }
+  if(intent==='journal'){
+    const content=extractTitle(cleaned,'journal')||cleaned;
+    voiceConfirm('Add Journal Entry',[
+      {key:'content',label:'Entry',value:content},
+      {key:'bucket',label:'Section',type:'select',options:BK,value:bucket},
+      {key:'mood',label:'Mood/tag',value:'',placeholder:'optional'},
+    ],(vals)=>{S.jour.unshift({id:uid(),title:"",content:vals.content,bucket:vals.bucket,mood:vals.mood,refDate:"",date:TD,created:TD});sv();R();showVoiceResult('✅ Journal entry saved.');});
+    return;
+  }
+  if(intent==='workout'){
+    const wtMatch=cleaned.match(/\b(walk(?:ed)?|run(?:ning)?|ran|swim(?:ming)?|lift(?:ing)?|erg(?:ging)?|row(?:ing)?|throw(?:ing)?|yoga|hiit|other)\b/i);
+    const durMatch=cleaned.match(/\b(\d+)\s*(min(?:utes?)?|mi(?:les?)?|hours?|hrs?)\b/i);
+    const wtype=wtMatch?WT.find(x=>x.toLowerCase().startsWith(wtMatch[1].toLowerCase().slice(0,3)))||wtMatch[1]:'Other';
+    const dur=durMatch?durMatch[1]:'';
+    const unit=durMatch&&durMatch[2].toLowerCase().startsWith('mi')&&!durMatch[2].toLowerCase().startsWith('min')?'mi':'min';
+    voiceConfirm('Log Workout',[
+      {key:'type',label:'Type',type:'select',options:WT,value:wtype},
+      {key:'dur',label:'Duration',value:dur,placeholder:'e.g. 30'},
+      {key:'unit',label:'Unit',type:'select',options:['min','mi'],value:unit},
+      {key:'date',label:'Date',type:'date',value:spokenDate||TD},
+    ],(vals)=>{S.wk.unshift({id:uid(),type:vals.type,dur:vals.dur,unit:vals.unit,notes:"",date:vals.date,created:TD});sv();R();showVoiceResult('✅ Workout logged: '+vals.type+(vals.dur?' · '+vals.dur+vals.unit:''));});
+    return;
+  }
+  if(intent==='meal'){
+    const calM=cleaned.match(/\b(\d+)\s*(?:cal(?:ories?)?)\b/i);
+    const proM=cleaned.match(/\b(\d+)\s*g?\s*(?:protein|pro)\b/i);
+    const mname=extractTitle(cleaned,'meal')||cleaned;
+    voiceConfirm('Log Meal',[
+      {key:'name',label:'Meal',value:mname},
+      {key:'cal',label:'Calories',value:calM?calM[1]:'',placeholder:'e.g. 400'},
+      {key:'pro',label:'Protein g',value:proM?proM[1]:'',placeholder:'e.g. 30'},
+    ],(vals)=>{S.meals.unshift({id:uid(),name:vals.name,cal:vals.cal,pro:vals.pro,carbs:"",fat:"",date:TD,created:TD});sv();R();showVoiceResult('✅ Meal logged: '+vals.name+(vals.cal?' · '+vals.cal+' cal':''));});
+    return;
+  }
+  if(intent==='maintenance'){
+    const task=extractTitle(cleaned,'maintenance')||cleaned;
+    voiceConfirm('Add Maintenance Task',[{key:'task',label:'Task',value:task}],(vals)=>{S.maint.push({id:uid(),task:vals.task,status:"Not Started",date:TD});sv();R();showVoiceResult('✅ Maintenance task added: "'+vals.task+'"');});
+    return;
+  }
+  if(intent==='morning'){
+    const item=extractTitle(cleaned,'morning')||cleaned;
+    voiceConfirm('Add to Morning Checklist',[{key:'text',label:'Item',value:item}],(vals)=>{if(!S.morningCk)S.morningCk=[];S.morningCk.push({id:uid(),text:vals.text,done:0});sv();R();showVoiceResult('✅ Added: "'+vals.text+'"');});
+    return;
+  }
+  if(intent==='evening'){
+    const item=extractTitle(cleaned,'evening')||cleaned;
+    voiceConfirm('Add to Evening Checklist',[{key:'text',label:'Item',value:item}],(vals)=>{if(!S.eveningCk)S.eveningCk=[];S.eveningCk.push({id:uid(),text:vals.text,done:0});sv();R();showVoiceResult('✅ Added: "'+vals.text+'"');});
+    return;
+  }
+
+  const prioM=t.match(/\b(high|urgent|important|critical)\b/i)?'High':t.match(/\b(low|minor|eventually|someday)\b/i)?'Low':'Medium';
+  const title=extractTitle(cleaned,'task')||cleaned;
+  voiceConfirm('Add Task',[
+    {key:'title',label:'Title',value:title},
+    {key:'priority',label:'Priority',type:'select',options:PR,value:prioM},
+    {key:'bucket',label:'Section',type:'select',options:BK,value:bucket},
+    {key:'dueDate',label:'Due Date',type:'date',value:spokenDate},
+    {key:'startTime',label:'Time',type:'time',value:spokenTime},
+  ],(vals)=>{
+    S.tasks.push({id:uid(),title:vals.title,priority:vals.priority,bucket:vals.bucket,stage:"Not Started",completed:0,createdDate:TD,dueDate:vals.dueDate||null,startTime:vals.startTime||"",notes:""});
+    sv();R();showVoiceResult('✅ Task added: "'+vals.title+'"');
+  });
+}
+
+function showVoiceHelp(){ml('🎙️ Voice Commands',`<div style="font-size:13px;line-height:1.8">
+<b>Just talk naturally – no magic words needed!</b><br>
+Filler words like "um", "uh", "I need a" are ignored.<br><br>
+<b>Examples:</b><br>
+"um I need a calendar invite for Wilbur's vet on Monday at 2pm"<br>
+"add task call the doctor on Friday"<br>
+"I need to pick up eggs and milk"<br>
+"remind me to take my medication tomorrow"<br>
+"log workout run 30 minutes"<br>
+"I ate chicken salad for lunch, about 400 calories"<br>
+"journal entry I had a great training session today"<br>
+"fix the porch light"<br>
+"mark electric as paid"<br>
+"open grocery" / "go to calendar"<br><br>
+<b>Date/time phrases:</b><br>
+"on Monday", "tomorrow", "next Friday"<br>
+"on March 15", "at 3pm", "at noon"<br><br>
+<b>App sections auto-detected from keywords:</b><br>
+Wilbur/Simba → Pets · CLO/work/team → CLO Work<br>
+rowing/erg → Row & Throw · forge/anvil → Blacksmith<br>
+</div>`);}
+
+// ── Core helpers ──────────────────────────────────────────────────────────────
+function h(t,a,c){
+  const e=document.createElement(t);
+  if(a)for(const[k,v]of Object.entries(a)){
+    if(v==null)continue;
+    if(k==="style"&&typeof v==="object")Object.assign(e.style,v);
+    else if(k[0]==="o"&&k[1]==="n")e[k.toLowerCase()]=v;
+    else if(k==="class")e.className=v;
+    else if(k==="checked")e.checked=!!v;
+    else e.setAttribute(k,String(v));
+  }
+  if(c)for(const x of c){
+    if(x==null||x===false||x===undefined)continue;
+    if(typeof x==="string"||typeof x==="number"){e.appendChild(document.createTextNode(String(x)));}
+    else if(x instanceof Node){e.appendChild(x);}
+  }
+  return e;
+}
+async function ld(){for(const k of KS){const v=await st.get("t5_"+k);if(v!==null)S[k]=v;}if(!S.cloCats)S.cloCats=JSON.parse(JSON.stringify(DCLO));S.cloCats.forEach(c=>{if(!c.subs)c.subs=[];});if(!S.acr)S.acr=ACRS.map(s=>({id:uid(),s,t:[],n:[]}));if(!S.swk)S.swk=[];if(!S.houseCk)S.houseCk=JSON.parse(JSON.stringify(DFLT_HCK));if(!S.homeLinks)S.homeLinks=[];if(!S.morningCk)S.morningCk=[];if(!S.eveningCk)S.eveningCk=[];if(!S.cloLinks)S.cloLinks=[];if(!S.wfLinks)S.wfLinks=[];if(!S.rowLinks)S.rowLinks=[];if(!S.throwLinks)S.throwLinks=[];if(!S.bsLinks)S.bsLinks=[];if(!S.learnLinks)S.learnLinks=[];if(!S.petLinks)S.petLinks=[];if(!S.jour)S.jour=[];if(!S.lP)S.lP=[];if(!S.bsP)S.bsP=[];if(!S.wfP)S.wfP=[];const cm=TD.slice(0,7);if(S.lastBillReset!==cm){S.bills.forEach(b=>{if(b.recurrence==="Monthly")b.paid=0;});S.lastBillReset=cm;sv();}const today=new Date();if(today.getDate()===1){S.bills.forEach(b=>{if(b.recurrence==="Monthly")b.paid=0;});sv();}}
+function sv(){KS.forEach(k=>st.set("t5_"+k,S[k]));}
+function R(){const r=document.getElementById("root");r.innerHTML="";try{r.appendChild(S.unlocked?rApp():rLock());}catch(err){console.error("Render error:",err);r.innerHTML='<div style="padding:20px;color:#c0392b;font-family:sans-serif"><b>Render error:</b><br>'+err.message+'<br><small>Check the console for details.</small></div>';}}
+function $(l,f,c="B Bp",s={}){const x=h("button",{class:c,onclick:f,style:s});x.innerHTML=l;return x;}
+function ip(t,v,f,p=""){const i=h("input",{type:t,value:v||"",placeholder:p});i.oninput=e=>f(e.target.value);return i;}
+function sl(v,f,o){const s=h("select");o.forEach(i=>{const vl=i.value!==undefined?i.value:i;const op=h("option",{value:vl},[i.label||i]);if(vl===v)op.selected=true;s.appendChild(op);});s.onchange=e=>f(e.target.value);return s;}
+function ta(v,f,p,r=3){const t=h("textarea",{placeholder:p,rows:r});t.value=v||"";t.oninput=e=>f(e.target.value);return t;}
+function bg(l,c=P){return h("span",{class:"badge",style:{background:c}},[String(l||"")]);}
+function C(c,s={}){return h("div",{class:"C",style:s},c);}
+function H(t,a=[]){return h("div",{class:"H"},[h("h3",{},[t]),h("div",{class:"Ha"},a)]);}
+function ml(t,c){const o=h("div",{class:"M"});const b=h("div",{class:"Mb"});b.appendChild(h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"12px"}},[h("strong",{style:{fontSize:"18px",color:P}},[t]),$("✕",()=>o.remove(),"",{background:"none",border:"none",fontSize:"20px",cursor:"pointer",color:"#333"})]));b.appendChild(c instanceof HTMLElement?c:Object.assign(h("div"),{innerHTML:c}));o.appendChild(b);document.body.appendChild(o);return o;}
+function FL(l,i){return h("div",{},[h("label",{class:"fl"},[l]),i]);}
+function lr(l,u){return h("a",{href:u,target:"_blank",style:{display:"block",padding:"7px 0",color:P,textDecoration:"none",borderBottom:"1px solid #eee",fontSize:"14px"}},["🔗 "+l]);}
+function SB(ts,a,f){return h("div",{class:"S"},ts.map(([k,l])=>$(l,()=>f(k),"Si"+(a===k?" a":""))));}
+function PB(p,c="#2980b9"){return h("div",{class:"pb"},[h("div",{class:"pf",style:{background:c,width:Math.min(p,100)+"%"}})]);}
+function CK(ck,f){const c=h("input",{type:"checkbox"});c.checked=!!ck;c.onchange=f;return c;}
+function DL(f){return $("🗑",f,"",{background:"none",border:"none",color:"#e74c3c",cursor:"pointer",fontSize:"14px"});}
+function AI(ph,fn){const i=ip("text","",()=>{},ph);let _busy=false;const go=()=>{if(_busy||!i.value.trim())return;_busy=true;fn(i.value.trim());i.value='';R();};i.addEventListener("keydown",e=>{if(e.key==="Enter")go();});return h("div",{style:{display:"flex",gap:"6px",marginTop:"8px",width:"100%"}},[i,$("+",go,"Bs Bp")]);}
+function ED(txt,onSave){const sp=h("span",{class:"editable",style:{flex:"1",fontSize:"13px"}},[txt]);sp.onclick=()=>{const inp=h("input",{type:"text",value:txt,style:{flex:"1",fontSize:"13px",border:"1px solid #003B6F",borderRadius:"4px",padding:"4px"}});inp.onblur=()=>{if(inp.value.trim()&&inp.value!==txt){onSave(inp.value.trim());}else{sp.textContent=txt;inp.replaceWith(sp);}};inp.onkeydown=e=>{if(e.key==="Enter"){inp.blur();}else if(e.key==="Escape"){sp.textContent=txt;inp.replaceWith(sp);}};sp.replaceWith(inp);inp.focus();inp.select();};return sp;}
+function gearL(w,g,set,lb){const c=C([]);c.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px"}},[lb]));(g||[]).forEach((it,i)=>{c.appendChild(h("div",{style:{display:"flex",alignItems:"center",gap:"6px",padding:"5px 0",borderBottom:"1px solid #eee",width:"100%"}},[h("span",{style:{flex:"1",fontSize:"13px"}},[it]),$("✏️",()=>{const v=prompt("Edit:",it);if(v!=null){const a=[...g];a[i]=v;set(a);sv();R();}},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}),DL(()=>{set(g.filter((_,j)=>j!==i));sv();R();})]));});c.appendChild(AI("Add item...",v=>{set([...g,v]);sv();}));w.appendChild(c);}
+function linksSec(w,linksKey,title){if(!S[linksKey])S[linksKey]=[];const links=S[linksKey];const c=C([]);c.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px"}},[title]));if(!links.length){c.appendChild(h("div",{style:{color:"#aaa",textAlign:"center",padding:"16px"}},["No custom links yet."]));}else{links.forEach(l=>{const linkDiv=h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"8px 0",borderBottom:"1px solid #eee",width:"100%"}});const anchor=h("a",{href:l.url,target:"_blank",rel:"noopener noreferrer",style:{flex:"1",color:P,textDecoration:"none",fontSize:"14px",cursor:"pointer"}});anchor.textContent="🔗 "+l.name;anchor.onclick=e=>{e.preventDefault();let url=l.url;if(!url.startsWith("http://")&&!url.startsWith("https://"))url="https://"+url;window.open(url,"_blank");};linkDiv.appendChild(anchor);linkDiv.appendChild(DL(()=>{S[linksKey]=S[linksKey].filter(x=>x.id!==l.id);sv();R();}));c.appendChild(linkDiv);});}c.appendChild($("+ Link",()=>{const f={n:"",u:""};const m=ml("Add Link",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text","",v=>f.n=v,"Link Name"),ip("text","",v=>f.u=v,"URL (e.g., https://example.com)"),$("Add",()=>{if(!f.n.trim()||!f.u.trim())return;let url=f.u.trim();if(!url.startsWith("http://")&&!url.startsWith("https://"))url="https://"+url;S[linksKey].push({id:uid(),name:f.n.trim(),url});sv();m.remove();R();},"B Bp")]));},"Bs Bp",{marginTop:"8px"}));w.appendChild(c);}
+function acrV(w,projects){(projects||[]).forEach(p=>{const op=S.u.ae[p.id];const c=C([],{borderLeft:"4px solid "+GL});c.appendChild(h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",cursor:"pointer",width:"100%"},onclick:()=>{S.u.ae[p.id]=!op;R();}},[h("div",{},[h("div",{style:{fontWeight:"700"}},[p.s||""]),h("div",{style:{fontSize:"12px",color:"#666"}},[(p.t||[]).length+" tasks"])]),h("span",{style:{fontSize:"16px"}},[op?"▲":"▼"])]));if(op){const bd=h("div",{style:{marginTop:"10px",width:"100%"}});(p.t||[]).forEach(t=>{const taskDiv=h("div",{style:{display:"grid",gridTemplateColumns:"auto 1fr auto auto",gap:"8px",alignItems:"center",padding:"6px 0",borderBottom:"1px solid #eee",width:"100%"}});taskDiv.appendChild(CK(t.done,()=>{t.done=!t.done;sv();R();}));const contentDiv=h("div",{style:{flex:"1"}});contentDiv.appendChild(ED(t.title||"Untitled",v=>{t.title=v;t.lastEdited=TD;sv();R();}));if(t.dueDate)contentDiv.appendChild(h("div",{style:{fontSize:"10px",color:"#888",marginTop:"2px"}},["📅 "+fmt(t.dueDate)]));if(t.refDate)contentDiv.appendChild(h("div",{style:{fontSize:"10px",color:"#666",marginTop:"2px"}},["📝 "+t.refDate]));taskDiv.appendChild(contentDiv);taskDiv.appendChild($("✏️",()=>{const tf={title:t.title||"Untitled",dueDate:t.dueDate||"",refDate:t.refDate||""};const tm=ml("Edit Task",h("div",{style:{display:"flex",flexDirection:"column",gap:"8px"}},[ip("text",t.title,v=>tf.title=v,"Task"),ip("date",t.dueDate||"",v=>tf.dueDate=v,"Due Date"),ip("text",t.refDate||"",v=>tf.refDate=v,"Reference Date"),$("Save",()=>{t.title=tf.title.trim();t.dueDate=tf.dueDate||null;t.refDate=tf.refDate||null;t.lastEdited=TD;sv();tm.remove();R();},"B Bp")]));},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}));taskDiv.appendChild(DL(()=>{p.t=p.t.filter(x=>x.id!==t.id);sv();R();}));bd.appendChild(taskDiv);});bd.appendChild(AI("Add task...",v=>{if(!p.t)p.t=[];p.t.push({id:uid(),title:v,done:0,dueDate:null,refDate:null});sv();}));bd.appendChild(h("div",{style:{fontWeight:"600",fontSize:"13px",margin:"10px 0 4px"}},["Notes"]));(p.n||[]).forEach(n=>{const noteDiv=h("div",{style:{background:"#f9f9f9",borderRadius:"6px",padding:"6px",marginBottom:"4px",fontSize:"12px",display:"flex",justifyContent:"space-between",alignItems:"start",gap:"6px"}});noteDiv.appendChild(h("span",{style:{flex:"1"}},[fmt(n.d)+" – "+(n.t||"")]));noteDiv.appendChild($("✏️",()=>{const nt=prompt("Edit note:",n.t);if(nt!==null&&nt.trim()){n.t=nt.trim();n.lastEdited=TD;sv();R();}},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"11px"}));noteDiv.appendChild(DL(()=>{p.n=p.n.filter(x=>x.id!==n.id);sv();R();}));bd.appendChild(noteDiv);});bd.appendChild(AI("Add note...",v=>{if(!p.n)p.n=[];p.n.push({id:uid(),t:v,d:TD});sv();}));c.appendChild(bd);}w.appendChild(c);});}
+function getAllTasks(){const all=[];(S.tasks||[]).forEach(t=>all.push(t));(S.cloCats||[]).forEach(c=>{(c.tasks||[]).forEach(t=>all.push({...t,bucket:"CLO Work"}));(c.subs||[]).forEach(s=>(s.tasks||[]).forEach(t=>all.push({...t,bucket:"CLO Work",completed:t.done})));});(S.wfP||[]).forEach(p=>(p.tasks||[]).forEach(t=>all.push({...t,bucket:"Way Forged LLC"})));(S.acr||[]).forEach(a=>(a.t||[]).forEach(t=>all.push({...t,bucket:"Athletics",title:t.title,completed:t.done})));(S.pets||[]).forEach(p=>(p.tr||[]).forEach(t=>all.push({...t,bucket:"Pets",title:t.text,completed:t.done})));(S.maint||[]).forEach(m=>all.push({...m,bucket:"Home",title:m.task,completed:m.status==="Complete"}));(S.lP||[]).forEach(p=>all.push({...p,bucket:"Learning",completed:p.stage==="Complete"}));(S.bsP||[]).forEach(p=>all.push({...p,bucket:"Blacksmith",title:p.name,completed:p.stage==="Complete"}));return all;}
+function getAllCalEv(){const all=[];all.push(...(S.calEv||[]));all.push(...(S.icsEv||[]));(S.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:t.startTime||"",bucket:t.bucket||"Personal",source:"task",ref:t});});(S.rec||[]).forEach(r=>{const today=new Date();const recDate=new Date(r.createdDate+"T00:00:00");if(r.recurrence==="Daily"){for(let d=new Date(recDate);d<=new Date(today.getFullYear(),today.getMonth()+2,0);d.setDate(d.getDate()+1)){const ds=d.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}else if(r.recurrence==="Weekdays"){for(let d=new Date(recDate);d<=new Date(today.getFullYear(),today.getMonth()+2,0);d.setDate(d.getDate()+1)){if(d.getDay()>=1&&d.getDay()<=5){const ds=d.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}}else if(r.recurrence==="Weekly"){const dayOfWeek=recDate.getDay();for(let d=new Date(recDate);d<=new Date(today.getFullYear(),today.getMonth()+2,0);d.setDate(d.getDate()+1)){if(d.getDay()===dayOfWeek){const ds=d.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}}else if(r.recurrence==="Monthly"){const dayOfMonth=recDate.getDate();for(let m=0;m<=3;m++){const targetDate=new Date(today.getFullYear(),today.getMonth()+m,dayOfMonth);if(!isNaN(targetDate.getTime())){const ds=targetDate.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}}});(S.cloCats||[]).forEach(c=>{(c.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:t.startTime||"",bucket:"CLO Work",source:"task",ref:t});});(c.subs||[]).forEach(s=>(s.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"CLO Work",source:"task",ref:t});}));});(S.wfP||[]).forEach(p=>{if(p.dueDate)all.push({id:p.id,title:p.title,date:p.dueDate,time:"",bucket:"Way Forged LLC",source:"wf_project",ref:p});(p.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Way Forged LLC",source:"task",ref:t});});});(S.acr||[]).forEach(a=>(a.t||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Athletics",source:"acr_task",ref:t});}));(S.pets||[]).forEach(p=>(p.ap||[]).forEach(a=>all.push({id:a.id,title:p.name+" Appt"+(a.note?" - "+a.note:""),date:a.date,time:"",bucket:"Pets",source:"pet_appt",ref:a})));(S.maint||[]).forEach(m=>{if(m.date)all.push({id:m.id,title:m.task,date:m.date,time:"",bucket:"Home",source:"maint",ref:m});});(S.lP||[]).forEach(p=>{if(p.dueDate)all.push({id:p.id,title:p.title,date:p.dueDate,time:"",bucket:"Learning",source:"learning",ref:p});});(S.bsP||[]).forEach(p=>{(p.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Blacksmith",source:"bs_task",ref:t});});});(S.bills||[]).forEach(b=>{if(b.recurrence==="One-time"&&b.date){all.push({id:b.id,title:b.n+" - $"+b.a,date:b.date,time:"",bucket:"Home",source:"bill",ref:b});}else if(b.recurrence==="Monthly"){const today=new Date();for(let m=0;m<=3;m++){const targetDate=new Date(today.getFullYear(),today.getMonth()+m,b.day);if(!isNaN(targetDate.getTime())){const ds=targetDate.toISOString().slice(0,10);all.push({id:b.id+"_"+ds,title:b.n+" - $"+b.a,date:ds,time:"",bucket:"Home",source:"bill",ref:b});}}}});(S.rem||[]).forEach(r=>{if(r.date)all.push({id:r.id,title:r.text,date:r.date,time:"",bucket:"Home",source:"reminder",ref:r});});(S.swk||[]).forEach(w=>all.push({id:w.id,title:w.type+(w.dur?" "+w.dur+(w.unit==="mi"?"mi":"m"):""),date:w.date,time:w.time||"",bucket:"Athletics",source:"workout",ref:w}));return all;}
+
+// ── Lock screen ───────────────────────────────────────────────────────────────
+function rLock(){
+  const w=h("div",{style:{minHeight:"100vh",background:P,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:"24px"}});
+  const bx=h("div",{style:{background:"#fff",borderRadius:"16px",paddi

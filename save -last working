@@ -7,7 +7,7 @@
 <link rel="manifest" href="./manifest.json"/>
 <link rel="apple-touch-icon" href="./icon.svg">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzJkNGM2NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFhMzU0OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPjxyZWN0IHg9IjQ1IiB5PSI1IiB3aWR0aD0iMTAiIGhlaWdodD0iNCIgZmlsbD0iIzI4NTBhMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxyZWN0IHg9IjQ3LjUiIHk9IjMiIHdpZHRoPSI1IiBoZWlnaHQ9IjIiIGZpbGw9IiNmZmNjMDAiLz48cmVjdCB4PSIzNSIgeT0iOS41IiB3aWR0aD0iMzAiIGhlaWdodD0iNyIgZmlsbD0iIzAwMTUzMyIvPjx0ZXh0IHg9IjUwIiB5PSIxNC41IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBPTElDRSBCT1g8L3RleHQ+PHJlY3QgeD0iMzAiIHk9IjE2LjUiIHdpZHRoPSI0MCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48cmVjdCB4PSIzNCIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0NSIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI1NiIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSIzNCIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0NSIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI1NiIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0MCIgeT0iNTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyOCIgZmlsbD0iIzhhOGE3NSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48cmVjdCB4PSI0MiIgeT0iNTIiIHdpZHRoPSI3IiBoZWlnaHQ9IjI0IiBmaWxsPSIjNzA3MDYwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMC41Ii8+PHJlY3QgeD0iNTEiIHk9IjUyIiB3aWR0aD0iNyIgaGVpZ2h0PSIyNCIgZmlsbD0iIzcwNzA2MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxyZWN0IHg9IjMwIiB5PSI4MC41IiB3aWR0aD0iNDAiIGhlaWdodD0iNiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==" type="image/svg+xml"/>
-<title>Dr. Way's T.A.R.D.I.S.</title>
+<title>Dr. Way's T.A.R.D.I.S. 9</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#f0f2f5;min-height:100vh}button{cursor:pointer;font-family:inherit}input,select,textarea{font-family:inherit;border:1px solid #ccc;border-radius:6px;padding:6px 10px;font-size:14px;width:100%}textarea{resize:vertical}
 .B{border-radius:8px;padding:8px 16px;font-size:14px;font-weight:600;border:2px solid transparent;cursor:pointer}.Bs{padding:4px 10px;font-size:12px;border-radius:8px;font-weight:600;border:2px solid transparent;cursor:pointer}
@@ -59,9 +59,20 @@
 <script>
 // ── PWA: Register Service Worker ─────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-    .then(r => console.log('SW registered', r.scope))
-    .catch(e => console.warn('SW failed:', e));
+  navigator.serviceWorker.register('./sw.js').then(reg => {
+    console.log('SW registered', reg.scope);
+    reg.addEventListener('updatefound', () => {
+      const newSW = reg.installing;
+      newSW.addEventListener('statechange', () => {
+        if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+          const toast = document.createElement('div');
+          toast.innerHTML = `<span>🔄 New version available!</span><button onclick="window.location.reload()" style="background:#fff;color:#003B6F;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;font-weight:600;margin-left:12px">Update</button>`;
+          toast.style.cssText = `position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#003B6F;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:9999;display:flex;align-items:center;white-space:nowrap`;
+          document.body.appendChild(toast);
+        }
+      });
+    });
+  }).catch(e => console.warn('SW failed:', e));
 }
 
 const P="#003B6F",PL="#004F9A",GL="#C9A84C",TD=new Date().toISOString().slice(0,10),uid=()=>Math.random().toString(36).slice(2,9),fmt=d=>d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"",fm$=n=>"$"+Number(n||0).toFixed(2);
@@ -95,7 +106,7 @@ async function dec(ciphertext,pw){
     return new TextDecoder().decode(pt);
   }catch{return'';}
 }
-const ms={},st={async get(k){try{if(window.storage){const r=await window.storage.get(k);return r?JSON.parse(r.value):null;}}catch{}return ms[k]??null;},async set(k,v){try{if(window.storage)await window.storage.set(k,JSON.stringify(v));}catch{}ms[k]=v;}};
+const st={async get(k){try{const v=localStorage.getItem(k);return v!=null?JSON.parse(v):null;}catch{return null;}},async set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){console.warn('Storage write failed:',e);}}};
 const DCLO=[{id:"c1",name:"Teaching Dates & Programs",poc:"",tasks:[],subs:[]},{id:"c2",name:"Cindy Tasks - T&A",poc:"",tasks:[],subs:[]},{id:"c3",name:"Cindy Tasks - Maxiflex",poc:"",tasks:[],subs:[]},{id:"c4",name:"Cindy Tasks - Leadership Notes",poc:"",tasks:[],subs:[]},{id:"c5",name:"Strategy",poc:"",tasks:[],subs:[]},{id:"c6",name:"Team Reminders",poc:"",tasks:[],subs:[]},{id:"c7",name:"Notes for Ldr Meetings",poc:"",tasks:[],subs:[]},{id:"c8",name:"Team To Do",poc:"",tasks:[],subs:[]},{id:"c9",name:"Performance Mgmt",poc:"",tasks:[],subs:[],desc:"Quarterly Reviews & Bell Curve"},{id:"c10",name:"Leader Dev - Programs",poc:"",tasks:[],subs:[],desc:"SUTS, SLP, Coaching, LLMP, Progression, SF182, Fed Talent, Mandatory Training, LEAP/LEAG, WHLDP"},{id:"c11",name:"Data & Assessments - NTNA",poc:"",tasks:[],subs:[]}];
 const ACRS=["Coaching","Weight Class","Social Media","Races","Highland Games - Dates","Highland Games - Throw Tips"];
 const DFLT_HCK=[{id:"hc1",text:"Have wallet, keys, phone",done:0},{id:"hc2",text:"Oven is off",done:0},{id:"hc3",text:"Windows are closed",done:0},{id:"hc4",text:"Doors locked",done:0},{id:"hc5",text:"Door downstairs is locked",done:0},{id:"hc6",text:"Animals in the house and safe",done:0},{id:"hc7",text:"Animals have plenty of water",done:0},{id:"hc8",text:"Forge is cold and off",done:0},{id:"hc9",text:"Temperature in the house is OK or changed as needed",done:0},{id:"hc10",text:"Spare key is in the dropbox and accessible",done:0}];
@@ -120,14 +131,22 @@ const VOICE_SILENCE_MS=2000;
 function closeVoicePanel(){voicePanelOpen=false;document.getElementById('voicePanel').classList.remove('show');if(voiceListening)stopVoice();}
 function toggleVoice(){if(!voicePanelOpen){voicePanelOpen=true;document.getElementById('voicePanel').classList.add('show');setVoiceStatus('Tap 🎙️ to start speaking');}if(voiceListening){stopVoice();}else{startVoice();}}
 
+const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream;
+
 function startVoice(){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){setVoiceStatus('❌ Speech recognition not supported. Try Chrome/Edge.');return;}
-  voiceRec=new SR();voiceRec.continuous=true;voiceRec.interimResults=true;voiceRec.lang='en-US';
+  if(!SR){setVoiceStatus('❌ Speech recognition not supported on this browser.');return;}
   const btn=document.getElementById('voiceBtn'),tr=document.getElementById('voiceTranscript'),rs=document.getElementById('voiceResult');
-  rs.style.display='none';tr.textContent='🎙️ Listening… (pause when done)';
+  rs.style.display='none';tr.textContent='🎙️ Listening… (speak now)';
   voiceFinalText='';
   if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+
+  // iOS Safari does not support continuous:true reliably — use single-shot mode
+  voiceRec=new SR();
+  voiceRec.continuous=!isIOS;
+  voiceRec.interimResults=!isIOS;
+  voiceRec.lang='en-US';
+  voiceRec.maxAlternatives=1;
 
   voiceRec.onresult=e=>{
     let interim='',final='';
@@ -137,11 +156,13 @@ function startVoice(){
     }
     if(final)voiceFinalText=final.trim();
     tr.textContent=(voiceFinalText||(interim||'🎙️ Listening…'));
-    if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
-    if(voiceFinalText||interim){
-      voiceSilenceTimer=setTimeout(()=>{
-        if(voiceListening){setVoiceStatus('✋ Paused – submitting…');stopVoice();}
-      },VOICE_SILENCE_MS);
+    if(!isIOS){
+      if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+      if(voiceFinalText||interim){
+        voiceSilenceTimer=setTimeout(()=>{
+          if(voiceListening){setVoiceStatus('✋ Paused – submitting…');stopVoice();}
+        },VOICE_SILENCE_MS);
+      }
     }
   };
 
@@ -149,23 +170,38 @@ function startVoice(){
     voiceListening=false;
     btn.classList.remove('listening');btn.textContent='🎙️';
     if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
-    const spoken=(voiceFinalText||document.getElementById('voiceTranscript').textContent).trim();
-    if(spoken&&spoken!=='🎙️ Listening… (pause when done)'&&spoken!=='🎙️ Listening…'){
+    const spoken=voiceFinalText||'';
+    if(spoken.trim()){
       btn.classList.add('processing');btn.textContent='⏳';
       setVoiceStatus('Processing…');
-      processVoiceCommand(spoken);
-    }else{setVoiceStatus('Nothing heard. Tap 🎙️ to try again.');}
+      processVoiceCommand(spoken.trim());
+    }else{
+      // On iOS, if nothing captured, show helpful message
+      if(isIOS){setVoiceStatus('Nothing heard. Make sure microphone is allowed in Settings → Safari → Microphone, then tap 🎙️ again.');}
+      else{setVoiceStatus('Nothing heard. Tap 🎙️ to try again.');}
+    }
   };
 
   voiceRec.onerror=err=>{
-    if(err.error==='no-speech')return;
     voiceListening=false;btn.classList.remove('listening');btn.textContent='🎙️';
-    setVoiceStatus('❌ Error: '+err.error+'. Tap to retry.');
+    if(err.error==='not-allowed'||err.error==='permission-denied'){
+      setVoiceStatus('❌ Mic blocked. Go to Settings → Safari → Microphone and allow this site.');
+    }else if(err.error==='no-speech'){
+      setVoiceStatus(isIOS?'No speech detected. Speak clearly and tap 🎙️ again.':'Nothing heard. Tap 🎙️ to try again.');
+    }else{
+      setVoiceStatus('❌ Error: '+err.error+'. Tap 🎙️ to retry.');
+    }
   };
 
-  voiceRec.start();voiceListening=true;
-  btn.classList.add('listening');btn.textContent='⏹️';
-  setVoiceStatus('🎙️ Listening… speak, then pause 2s');
+  try{
+    voiceRec.start();
+    voiceListening=true;
+    btn.classList.add('listening');btn.textContent='⏹️';
+    setVoiceStatus(isIOS?'🎙️ Listening… speak now, then tap ⏹️ when done':'🎙️ Listening… speak, then pause 2s');
+  }catch(e){
+    setVoiceStatus('❌ Could not start mic: '+e.message);
+    voiceListening=false;
+  }
 }
 
 function stopVoice(){
@@ -490,7 +526,14 @@ function gearL(w,g,set,lb){const c=C([]);c.appendChild(h("div",{style:{fontWeigh
 function linksSec(w,linksKey,title){if(!S[linksKey])S[linksKey]=[];const links=S[linksKey];const c=C([]);c.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px"}},[title]));if(!links.length){c.appendChild(h("div",{style:{color:"#aaa",textAlign:"center",padding:"16px"}},["No custom links yet."]));}else{links.forEach(l=>{const linkDiv=h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"8px 0",borderBottom:"1px solid #eee",width:"100%"}});const anchor=h("a",{href:l.url,target:"_blank",rel:"noopener noreferrer",style:{flex:"1",color:P,textDecoration:"none",fontSize:"14px",cursor:"pointer"}});anchor.textContent="🔗 "+l.name;anchor.onclick=e=>{e.preventDefault();let url=l.url;if(!url.startsWith("http://")&&!url.startsWith("https://"))url="https://"+url;window.open(url,"_blank");};linkDiv.appendChild(anchor);linkDiv.appendChild(DL(()=>{S[linksKey]=S[linksKey].filter(x=>x.id!==l.id);sv();R();}));c.appendChild(linkDiv);});}c.appendChild($("+ Link",()=>{const f={n:"",u:""};const m=ml("Add Link",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text","",v=>f.n=v,"Link Name"),ip("text","",v=>f.u=v,"URL (e.g., https://example.com)"),$("Add",()=>{if(!f.n.trim()||!f.u.trim())return;let url=f.u.trim();if(!url.startsWith("http://")&&!url.startsWith("https://"))url="https://"+url;S[linksKey].push({id:uid(),name:f.n.trim(),url});sv();m.remove();R();},"B Bp")]));},"Bs Bp",{marginTop:"8px"}));w.appendChild(c);}
 function acrV(w,projects){(projects||[]).forEach(p=>{const op=S.u.ae[p.id];const c=C([],{borderLeft:"4px solid "+GL});c.appendChild(h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",cursor:"pointer",width:"100%"},onclick:()=>{S.u.ae[p.id]=!op;R();}},[h("div",{},[h("div",{style:{fontWeight:"700"}},[p.s||""]),h("div",{style:{fontSize:"12px",color:"#666"}},[(p.t||[]).length+" tasks"])]),h("span",{style:{fontSize:"16px"}},[op?"▲":"▼"])]));if(op){const bd=h("div",{style:{marginTop:"10px",width:"100%"}});(p.t||[]).forEach(t=>{const taskDiv=h("div",{style:{display:"grid",gridTemplateColumns:"auto 1fr auto auto",gap:"8px",alignItems:"center",padding:"6px 0",borderBottom:"1px solid #eee",width:"100%"}});taskDiv.appendChild(CK(t.done,()=>{t.done=!t.done;sv();R();}));const contentDiv=h("div",{style:{flex:"1"}});contentDiv.appendChild(ED(t.title||"Untitled",v=>{t.title=v;t.lastEdited=TD;sv();R();}));if(t.dueDate)contentDiv.appendChild(h("div",{style:{fontSize:"10px",color:"#888",marginTop:"2px"}},["📅 "+fmt(t.dueDate)]));if(t.refDate)contentDiv.appendChild(h("div",{style:{fontSize:"10px",color:"#666",marginTop:"2px"}},["📝 "+t.refDate]));taskDiv.appendChild(contentDiv);taskDiv.appendChild($("✏️",()=>{const tf={title:t.title||"Untitled",dueDate:t.dueDate||"",refDate:t.refDate||""};const tm=ml("Edit Task",h("div",{style:{display:"flex",flexDirection:"column",gap:"8px"}},[ip("text",t.title,v=>tf.title=v,"Task"),ip("date",t.dueDate||"",v=>tf.dueDate=v,"Due Date"),ip("text",t.refDate||"",v=>tf.refDate=v,"Reference Date"),$("Save",()=>{t.title=tf.title.trim();t.dueDate=tf.dueDate||null;t.refDate=tf.refDate||null;t.lastEdited=TD;sv();tm.remove();R();},"B Bp")]));},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}));taskDiv.appendChild(DL(()=>{p.t=p.t.filter(x=>x.id!==t.id);sv();R();}));bd.appendChild(taskDiv);});bd.appendChild(AI("Add task...",v=>{if(!p.t)p.t=[];p.t.push({id:uid(),title:v,done:0,dueDate:null,refDate:null});sv();}));bd.appendChild(h("div",{style:{fontWeight:"600",fontSize:"13px",margin:"10px 0 4px"}},["Notes"]));(p.n||[]).forEach(n=>{const noteDiv=h("div",{style:{background:"#f9f9f9",borderRadius:"6px",padding:"6px",marginBottom:"4px",fontSize:"12px",display:"flex",justifyContent:"space-between",alignItems:"start",gap:"6px"}});noteDiv.appendChild(h("span",{style:{flex:"1"}},[fmt(n.d)+" – "+(n.t||"")]));noteDiv.appendChild($("✏️",()=>{const nt=prompt("Edit note:",n.t);if(nt!==null&&nt.trim()){n.t=nt.trim();n.lastEdited=TD;sv();R();}},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"11px"}));noteDiv.appendChild(DL(()=>{p.n=p.n.filter(x=>x.id!==n.id);sv();R();}));bd.appendChild(noteDiv);});bd.appendChild(AI("Add note...",v=>{if(!p.n)p.n=[];p.n.push({id:uid(),t:v,d:TD});sv();}));c.appendChild(bd);}w.appendChild(c);});}
 function getAllTasks(){const all=[];(S.tasks||[]).forEach(t=>all.push(t));(S.cloCats||[]).forEach(c=>{(c.tasks||[]).forEach(t=>all.push({...t,bucket:"CLO Work"}));(c.subs||[]).forEach(s=>(s.tasks||[]).forEach(t=>all.push({...t,bucket:"CLO Work",completed:t.done})));});(S.wfP||[]).forEach(p=>(p.tasks||[]).forEach(t=>all.push({...t,bucket:"Way Forged LLC"})));(S.acr||[]).forEach(a=>(a.t||[]).forEach(t=>all.push({...t,bucket:"Athletics",title:t.title,completed:t.done})));(S.pets||[]).forEach(p=>(p.tr||[]).forEach(t=>all.push({...t,bucket:"Pets",title:t.text,completed:t.done})));(S.maint||[]).forEach(m=>all.push({...m,bucket:"Home",title:m.task,completed:m.status==="Complete"}));(S.lP||[]).forEach(p=>all.push({...p,bucket:"Learning",completed:p.stage==="Complete"}));(S.bsP||[]).forEach(p=>all.push({...p,bucket:"Blacksmith",title:p.name,completed:p.stage==="Complete"}));return all;}
-function getAllCalEv(){const all=[];all.push(...(S.calEv||[]));all.push(...(S.icsEv||[]));(S.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:t.startTime||"",bucket:t.bucket||"Personal",source:"task",ref:t});});(S.rec||[]).forEach(r=>{const today=new Date();const recDate=new Date(r.createdDate+"T00:00:00");if(r.recurrence==="Daily"){for(let d=new Date(recDate);d<=new Date(today.getFullYear(),today.getMonth()+2,0);d.setDate(d.getDate()+1)){const ds=d.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}else if(r.recurrence==="Weekdays"){for(let d=new Date(recDate);d<=new Date(today.getFullYear(),today.getMonth()+2,0);d.setDate(d.getDate()+1)){if(d.getDay()>=1&&d.getDay()<=5){const ds=d.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}}else if(r.recurrence==="Weekly"){const dayOfWeek=recDate.getDay();for(let d=new Date(recDate);d<=new Date(today.getFullYear(),today.getMonth()+2,0);d.setDate(d.getDate()+1)){if(d.getDay()===dayOfWeek){const ds=d.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}}else if(r.recurrence==="Monthly"){const dayOfMonth=recDate.getDate();for(let m=0;m<=3;m++){const targetDate=new Date(today.getFullYear(),today.getMonth()+m,dayOfMonth);if(!isNaN(targetDate.getTime())){const ds=targetDate.toISOString().slice(0,10);all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});}}}});(S.cloCats||[]).forEach(c=>{(c.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:t.startTime||"",bucket:"CLO Work",source:"task",ref:t});});(c.subs||[]).forEach(s=>(s.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"CLO Work",source:"task",ref:t});}));});(S.wfP||[]).forEach(p=>{if(p.dueDate)all.push({id:p.id,title:p.title,date:p.dueDate,time:"",bucket:"Way Forged LLC",source:"wf_project",ref:p});(p.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Way Forged LLC",source:"task",ref:t});});});(S.acr||[]).forEach(a=>(a.t||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Athletics",source:"acr_task",ref:t});}));(S.pets||[]).forEach(p=>(p.ap||[]).forEach(a=>all.push({id:a.id,title:p.name+" Appt"+(a.note?" - "+a.note:""),date:a.date,time:"",bucket:"Pets",source:"pet_appt",ref:a})));(S.maint||[]).forEach(m=>{if(m.date)all.push({id:m.id,title:m.task,date:m.date,time:"",bucket:"Home",source:"maint",ref:m});});(S.lP||[]).forEach(p=>{if(p.dueDate)all.push({id:p.id,title:p.title,date:p.dueDate,time:"",bucket:"Learning",source:"learning",ref:p});});(S.bsP||[]).forEach(p=>{(p.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Blacksmith",source:"bs_task",ref:t});});});(S.bills||[]).forEach(b=>{if(b.recurrence==="One-time"&&b.date){all.push({id:b.id,title:b.n+" - $"+b.a,date:b.date,time:"",bucket:"Home",source:"bill",ref:b});}else if(b.recurrence==="Monthly"){const today=new Date();for(let m=0;m<=3;m++){const targetDate=new Date(today.getFullYear(),today.getMonth()+m,b.day);if(!isNaN(targetDate.getTime())){const ds=targetDate.toISOString().slice(0,10);all.push({id:b.id+"_"+ds,title:b.n+" - $"+b.a,date:ds,time:"",bucket:"Home",source:"bill",ref:b});}}}});(S.rem||[]).forEach(r=>{if(r.date)all.push({id:r.id,title:r.text,date:r.date,time:"",bucket:"Home",source:"reminder",ref:r});});(S.swk||[]).forEach(w=>all.push({id:w.id,title:w.type+(w.dur?" "+w.dur+(w.unit==="mi"?"mi":"m"):""),date:w.date,time:w.time||"",bucket:"Athletics",source:"workout",ref:w}));return all;}
+function getAllCalEv(){const all=[];all.push(...(S.calEv||[]));all.push(...(S.icsEv||[]));(S.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:t.startTime||"",bucket:t.bucket||"Personal",source:"task",ref:t});});(S.rec||[]).forEach(r=>{const today=new Date();const horizon=new Date(today.getFullYear(),today.getMonth()+3,0);const recDate=new Date((r.createdDate||TD)+"T00:00:00");const push=ds=>all.push({id:r.id+"_"+ds,title:r.title,date:ds,time:r.startTime||"",bucket:r.bucket||"Personal",source:"recurring_task",ref:r});
+  if(r.recurrence==="Daily"){for(let d=new Date(recDate);d<=horizon;d.setDate(d.getDate()+1))push(d.toISOString().slice(0,10));}
+  else if(r.recurrence==="Weekdays"){for(let d=new Date(recDate);d<=horizon;d.setDate(d.getDate()+1)){if(d.getDay()>=1&&d.getDay()<=5)push(d.toISOString().slice(0,10));}}
+  else if(r.recurrence==="Weekly"){for(let d=new Date(recDate);d<=horizon;d.setDate(d.getDate()+7))push(d.toISOString().slice(0,10));}
+  else if(r.recurrence==="Biweekly"){for(let d=new Date(recDate);d<=horizon;d.setDate(d.getDate()+14))push(d.toISOString().slice(0,10));}
+  else if(r.recurrence==="Monthly"){for(let d=new Date(recDate);d<=horizon;d.setMonth(d.getMonth()+1))push(d.toISOString().slice(0,10));}
+  else if(r.recurrence==="Yearly"){for(let d=new Date(recDate);d<=horizon;d.setFullYear(d.getFullYear()+1))push(d.toISOString().slice(0,10));}
+});(S.cloCats||[]).forEach(c=>{(c.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:t.startTime||"",bucket:"CLO Work",source:"task",ref:t});});(c.subs||[]).forEach(s=>(s.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"CLO Work",source:"task",ref:t});}));});(S.wfP||[]).forEach(p=>{if(p.dueDate)all.push({id:p.id,title:p.title,date:p.dueDate,time:"",bucket:"Way Forged LLC",source:"wf_project",ref:p});(p.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Way Forged LLC",source:"task",ref:t});});});(S.acr||[]).forEach(a=>(a.t||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Athletics",source:"acr_task",ref:t});}));(S.pets||[]).forEach(p=>(p.ap||[]).forEach(a=>all.push({id:a.id,title:p.name+" Appt"+(a.note?" - "+a.note:""),date:a.date,time:"",bucket:"Pets",source:"pet_appt",ref:a})));(S.maint||[]).forEach(m=>{if(m.date)all.push({id:m.id,title:m.task,date:m.date,time:"",bucket:"Home",source:"maint",ref:m});});(S.lP||[]).forEach(p=>{if(p.dueDate)all.push({id:p.id,title:p.title,date:p.dueDate,time:"",bucket:"Learning",source:"learning",ref:p});});(S.bsP||[]).forEach(p=>{(p.tasks||[]).forEach(t=>{if(t.dueDate)all.push({id:t.id,title:t.title,date:t.dueDate,time:"",bucket:"Blacksmith",source:"bs_task",ref:t});});});(S.bills||[]).forEach(b=>{if(b.recurrence==="One-time"&&b.date){all.push({id:b.id,title:b.n+" - $"+b.a,date:b.date,time:"",bucket:"Home",source:"bill",ref:b});}else if(b.recurrence==="Monthly"){const today=new Date();for(let m=0;m<=3;m++){const targetDate=new Date(today.getFullYear(),today.getMonth()+m,b.day);if(!isNaN(targetDate.getTime())){const ds=targetDate.toISOString().slice(0,10);all.push({id:b.id+"_"+ds,title:b.n+" - $"+b.a,date:ds,time:"",bucket:"Home",source:"bill",ref:b});}}}});(S.rem||[]).forEach(r=>{if(r.date)all.push({id:r.id,title:r.text,date:r.date,time:"",bucket:"Home",source:"reminder",ref:r});});(S.swk||[]).forEach(w=>all.push({id:w.id,title:w.type+(w.dur?" "+w.dur+(w.unit==="mi"?"mi":"m"):""),date:w.date,time:w.time||"",bucket:"Athletics",source:"workout",ref:w}));return all;}
 
 // ── Lock screen ───────────────────────────────────────────────────────────────
 function rLock(){
@@ -590,7 +633,10 @@ function rTasks(w){if(_recurringSpawnedDate!==TD){_recurringSpawnedDate=TD;spawn
   if(!flt.length&&!tw.length&&!tev.length)w.appendChild(C([h("div",{style:{textAlign:"center",color:"#aaa",padding:"32px"}},["No tasks 🎉"])]));
   if(dn.length){w.appendChild(h("div",{style:{fontWeight:"700",color:"#27ae60",fontSize:"13px",margin:"12px 0 4px"}},["✅ Done ("+dn.length+")"]));dn.forEach(t=>w.appendChild(tC(t)));}
   if((S.rec||[]).length){const rc=C([],{background:"#f0f4ff"});rc.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:P}},["♻️ Recurring"]));(S.rec||[]).forEach(r=>{rc.appendChild(h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"5px 0",borderBottom:"1px solid #e0e0e0",width:"100%"}},[h("span",{style:{fontSize:"13px"}},[r.title,bg(r.recurrence,"#8e44ad")]),DL(()=>{S.rec=S.rec.filter(x=>x.id!==r.id);sv();R();})]));});w.appendChild(rc);}}
-function addTM(){const f={title:"",priority:"Medium",bucket:"Personal",stage:"Not Started",startTime:"",dueDate:"",notes:"",recurrence:"None"};let _saved=false;const m=ml("Add Task",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text","",v=>f.title=v,"Title"),h("div",{class:"g2"},[FL("Priority",sl("Medium",v=>f.priority=v,PR)),FL("Bucket",sl("Personal",v=>f.bucket=v,BK)),FL("Stage",sl("Not Started",v=>f.stage=v,ST)),FL("Recurrence",sl("None",v=>f.recurrence=v,RC)),FL("Time",ip("time","",v=>f.startTime=v)),FL("Due",ip("date","",v=>f.dueDate=v))]),ta("",v=>f.notes=v,"Notes...",2),$("Add",()=>{if(_saved||!f.title.trim())return;_saved=true;const t={...f,id:uid(),completed:0,createdDate:TD};if(f.recurrence!=="None")S.rec.push({...t,id:uid()});S.tasks.push(t);sv();m.remove();R();},"B Bp")]));}
+function addTM(){const f={title:"",priority:"Medium",bucket:"Personal",stage:"Not Started",startTime:"",dueDate:"",notes:"",recurrence:"None",recStartDate:TD};let _saved=false;
+  const recStartRow=FL("Recurs from",ip("date",TD,v=>f.recStartDate=v));recStartRow.style.display="none";
+  const recSel=sl("None",v=>{f.recurrence=v;recStartRow.style.display=v!=="None"?"block":"none";},[...RC]);
+  const m=ml("Add Task",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text","",v=>f.title=v,"Title"),h("div",{class:"g2"},[FL("Priority",sl("Medium",v=>f.priority=v,PR)),FL("Bucket",sl("Personal",v=>f.bucket=v,BK)),FL("Stage",sl("Not Started",v=>f.stage=v,ST)),FL("Recurrence",recSel),recStartRow,FL("Time",ip("time","",v=>f.startTime=v)),FL("Due",ip("date","",v=>f.dueDate=v))]),ta("",v=>f.notes=v,"Notes...",2),$("Add",()=>{if(_saved||!f.title.trim())return;_saved=true;const t={...f,id:uid(),completed:0,createdDate:f.recStartDate||TD};if(f.recurrence!=="None")S.rec.push({...t,id:uid()});S.tasks.push(t);sv();m.remove();R();},"B Bp")]));}
 function tC(t){const taskTitle=t.title||t.text||t.task||t.name||"Untitled Task";
   const mainDiv=h("div",{style:{display:"grid",gridTemplateColumns:"auto 1fr auto",gap:"12px",alignItems:"start",marginBottom:"6px",borderLeft:"4px solid "+(PC[t.priority]||"#888"),background:"#fff",borderRadius:"10px",padding:"12px",boxShadow:"0 1px 4px rgba(0,0,0,.06)"}});
   mainDiv.appendChild(CK(t.completed,()=>{t.completed=!t.completed;sv();R();}));
@@ -744,10 +790,12 @@ function rSet(w){w.appendChild(H("⚙️ Settings"));
   // PWA Status card
   const pwac=C([],{background:"#f0f4ff"});pwac.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:P}},["📱 PWA Status"]));
   const swReady='serviceWorker' in navigator;
-  const swSt=swReady?"✅ Service Worker supported (offline ready after first load)":"⚠️ Service Worker not supported in this browser";
-  const mfStatus='✅ Manifest linked — install prompt available on Chrome/Edge. Use Share → Add to Home Screen on Safari.';
+  const swSt=swReady?"✅ Service Worker active — app updates automatically when you push new code":"⚠️ Service Worker not supported in this browser";
+  const mfStatus='✅ Manifest linked — install prompt on Chrome/Edge. Safari: Share → Add to Home Screen.';
+  const upSt='🔄 To trigger an update: bump CACHE version in sw.js, then push. A toast will appear.';
   pwac.appendChild(h("div",{style:{fontSize:"12px",lineHeight:"2"}},[swSt]));
   pwac.appendChild(h("div",{style:{fontSize:"12px",lineHeight:"2"}},[mfStatus]));
+  pwac.appendChild(h("div",{style:{fontSize:"12px",lineHeight:"2",color:"#555"}},[upSt]));
   w.appendChild(pwac);
 
   const cc=C([]);cc.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px"}},["🔒 Encrypted Credentials"]));cc.appendChild($(S.u.sc?"Hide":"Show",async()=>{

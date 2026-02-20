@@ -57,43 +57,12 @@
 <button id="voiceBtn" onclick="toggleVoice()" title="Voice Assistant">🎙️</button>
 
 <script>
-// ── PWA: Inject manifest.json as a Blob URL ──────────────────────────────────
-(function injectManifest(){
-  const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#2d4c65"/><stop offset="100%" style="stop-color:#1a3548"/></linearGradient></defs><rect width="100" height="100" fill="#003B6F"/><rect x="45" y="5" width="10" height="4" fill="#2850a0" stroke="#000" stroke-width="0.5"/><rect x="47.5" y="3" width="5" height="2" fill="#ffcc00"/><rect x="35" y="9.5" width="30" height="7" fill="#001533"/><text x="50" y="14.5" font-family="Arial,sans-serif" font-size="5" font-weight="bold" fill="#fff" text-anchor="middle">POLICE BOX</text><rect x="30" y="16.5" width="40" height="70" fill="url(#bg)" stroke="#000" stroke-width="1.5"/><rect x="34" y="21" width="8" height="9" fill="#ddeeff" stroke="#000" stroke-width="0.8"/><rect x="45" y="21" width="8" height="9" fill="#ddeeff" stroke="#000" stroke-width="0.8"/><rect x="56" y="21" width="8" height="9" fill="#ddeeff" stroke="#000" stroke-width="0.8"/><rect x="34" y="33" width="8" height="9" fill="#ddeeff" stroke="#000" stroke-width="0.8"/><rect x="45" y="33" width="8" height="9" fill="#ddeeff" stroke="#000" stroke-width="0.8"/><rect x="56" y="33" width="8" height="9" fill="#ddeeff" stroke="#000" stroke-width="0.8"/><rect x="40" y="50" width="20" height="28" fill="#8a8a75" stroke="#000" stroke-width="1"/><rect x="42" y="52" width="7" height="24" fill="#707060" stroke="#000" stroke-width="0.5"/><rect x="51" y="52" width="7" height="24" fill="#707060" stroke="#000" stroke-width="0.5"/><rect x="30" y="80.5" width="40" height="6" fill="#000"/></svg>`;
-  const svgBlob = new Blob([ICON_SVG],{type:'image/svg+xml'});
-  const svgUrl = URL.createObjectURL(svgBlob);
-  const manifest = {
-    name:"Dr. Way's T.A.R.D.I.S.",
-    short_name:"TARDIS",
-    description:"Time And Relative Dimension In Scheduling – Dr. Way's personal organizer",
-    start_url:"./",
-    display:"standalone",
-    background_color:"#003B6F",
-    theme_color:"#003B6F",
-    orientation:"portrait-primary",
-    icons:[
-      {src:svgUrl,sizes:"192x192",type:"image/svg+xml",purpose:"any maskable"},
-      {src:svgUrl,sizes:"512x512",type:"image/svg+xml",purpose:"any maskable"}
-    ],
-    categories:["productivity","utilities"],
-    shortcuts:[
-      {name:"Today's Tasks",short_name:"Tasks",description:"View today's tasks",url:"./"},
-      {name:"Calendar",short_name:"Calendar",description:"View calendar",url:"./"}
-    ]
-  };
-  const mBlob = new Blob([JSON.stringify(manifest)],{type:'application/json'});
-  const mUrl = URL.createObjectURL(mBlob);
-  document.getElementById('manifestLink').href = mUrl;
-})();
-
-// ── PWA: Register Service Worker via Blob URL ────────────────────────────────
-// Service Worker note: SW registration from a single HTML file is not possible
-// due to browser same-origin security rules (blob: URLs are blocked).
-// To enable offline/SW support, save this file to a web server and add a
-// separate sw.js file. The manifest below still enables installability on http/https.
-window._swStatus = 'unavailable';
-
-const P="#003B6F",PL="#004F9A",GL="#C9A84C",TD=new Date().toISOString().slice(0,10),uid=()=>Math.random().toString(36).slice(2,9),fmt=d=>d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"",fm$=n=>"$"+Number(n||0).toFixed(2);
+// ── PWA: Register Service Worker ─────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(reg => { console.log('✅ SW registered', reg.scope); window._swStatus = 'active'; })
+    .catch(err => { console.warn('SW failed:', err); window._swStatus = 'failed'; });
+}ng().slice(0,10),uid=()=>Math.random().toString(36).slice(2,9),fmt=d=>d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"",fm$=n=>"$"+Number(n||0).toFixed(2);
 const BK=["Personal","Way Forged LLC","CLO Work","Home","Athletics","Blacksmith","Row & Throw","Learning","Pets"],PR=["High","Medium","Low"],ST=["Not Started","In Progress","On Hold","Waiting","Review","Complete"],RC=["None","Daily","Weekdays","Weekly","Biweekly","Monthly"],WT=["Walk","Run","Swim","Lift","Erg","Row","Throw","Yoga","HIIT","Other"];
 const PC={High:"#e74c3c",Medium:"#f39c12",Low:"#27ae60"},BC={"Personal":"#6c63ff","Way Forged LLC":GL,"CLO Work":"#2980b9","Home":"#27ae60","Athletics":"#e67e22","Blacksmith":"#7f8c8d","Row & Throw":"#16a085","Learning":"#8e44ad","Pets":"#e91e8c"};
 // ── Crypto helpers ────────────────────────────────────────────────────────────

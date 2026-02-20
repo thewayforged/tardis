@@ -120,14 +120,22 @@ const VOICE_SILENCE_MS=2000;
 function closeVoicePanel(){voicePanelOpen=false;document.getElementById('voicePanel').classList.remove('show');if(voiceListening)stopVoice();}
 function toggleVoice(){if(!voicePanelOpen){voicePanelOpen=true;document.getElementById('voicePanel').classList.add('show');setVoiceStatus('Tap 🎙️ to start speaking');}if(voiceListening){stopVoice();}else{startVoice();}}
 
+const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream;
+
 function startVoice(){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){setVoiceStatus('❌ Speech recognition not supported. Try Chrome/Edge.');return;}
-  voiceRec=new SR();voiceRec.continuous=true;voiceRec.interimResults=true;voiceRec.lang='en-US';
+  if(!SR){setVoiceStatus('❌ Speech recognition not supported on this browser.');return;}
   const btn=document.getElementById('voiceBtn'),tr=document.getElementById('voiceTranscript'),rs=document.getElementById('voiceResult');
-  rs.style.display='none';tr.textContent='🎙️ Listening… (pause when done)';
+  rs.style.display='none';tr.textContent='🎙️ Listening… (speak now)';
   voiceFinalText='';
   if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+
+  // iOS Safari does not support continuous:true reliably — use single-shot mode
+  voiceRec=new SR();
+  voiceRec.continuous=!isIOS;
+  voiceRec.interimResults=!isIOS;
+  voiceRec.lang='en-US';
+  voiceRec.maxAlternatives=1;
 
   voiceRec.onresult=e=>{
     let interim='',final='';
@@ -137,11 +145,13 @@ function startVoice(){
     }
     if(final)voiceFinalText=final.trim();
     tr.textContent=(voiceFinalText||(interim||'🎙️ Listening…'));
-    if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
-    if(voiceFinalText||interim){
-      voiceSilenceTimer=setTimeout(()=>{
-        if(voiceListening){setVoiceStatus('✋ Paused – submitting…');stopVoice();}
-      },VOICE_SILENCE_MS);
+    if(!isIOS){
+      if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
+      if(voiceFinalText||interim){
+        voiceSilenceTimer=setTimeout(()=>{
+          if(voiceListening){setVoiceStatus('✋ Paused – submitting…');stopVoice();}
+        },VOICE_SILENCE_MS);
+      }
     }
   };
 
@@ -149,23 +159,38 @@ function startVoice(){
     voiceListening=false;
     btn.classList.remove('listening');btn.textContent='🎙️';
     if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
-    const spoken=(voiceFinalText||document.getElementById('voiceTranscript').textContent).trim();
-    if(spoken&&spoken!=='🎙️ Listening… (pause when done)'&&spoken!=='🎙️ Listening…'){
+    const spoken=voiceFinalText||'';
+    if(spoken.trim()){
       btn.classList.add('processing');btn.textContent='⏳';
       setVoiceStatus('Processing…');
-      processVoiceCommand(spoken);
-    }else{setVoiceStatus('Nothing heard. Tap 🎙️ to try again.');}
+      processVoiceCommand(spoken.trim());
+    }else{
+      // On iOS, if nothing captured, show helpful message
+      if(isIOS){setVoiceStatus('Nothing heard. Make sure microphone is allowed in Settings → Safari → Microphone, then tap 🎙️ again.');}
+      else{setVoiceStatus('Nothing heard. Tap 🎙️ to try again.');}
+    }
   };
 
   voiceRec.onerror=err=>{
-    if(err.error==='no-speech')return;
     voiceListening=false;btn.classList.remove('listening');btn.textContent='🎙️';
-    setVoiceStatus('❌ Error: '+err.error+'. Tap to retry.');
+    if(err.error==='not-allowed'||err.error==='permission-denied'){
+      setVoiceStatus('❌ Mic blocked. Go to Settings → Safari → Microphone and allow this site.');
+    }else if(err.error==='no-speech'){
+      setVoiceStatus(isIOS?'No speech detected. Speak clearly and tap 🎙️ again.':'Nothing heard. Tap 🎙️ to try again.');
+    }else{
+      setVoiceStatus('❌ Error: '+err.error+'. Tap 🎙️ to retry.');
+    }
   };
 
-  voiceRec.start();voiceListening=true;
-  btn.classList.add('listening');btn.textContent='⏹️';
-  setVoiceStatus('🎙️ Listening… speak, then pause 2s');
+  try{
+    voiceRec.start();
+    voiceListening=true;
+    btn.classList.add('listening');btn.textContent='⏹️';
+    setVoiceStatus(isIOS?'🎙️ Listening… speak now, then tap ⏹️ when done':'🎙️ Listening… speak, then pause 2s');
+  }catch(e){
+    setVoiceStatus('❌ Could not start mic: '+e.message);
+    voiceListening=false;
+  }
 }
 
 function stopVoice(){

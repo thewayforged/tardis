@@ -7,7 +7,7 @@
 <link rel="manifest" href="./manifest.json"/>
 <link rel="apple-touch-icon" href="./icon.svg">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzJkNGM2NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFhMzU0OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPjxyZWN0IHg9IjQ1IiB5PSI1IiB3aWR0aD0iMTAiIGhlaWdodD0iNCIgZmlsbD0iIzI4NTBhMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxyZWN0IHg9IjQ3LjUiIHk9IjMiIHdpZHRoPSI1IiBoZWlnaHQ9IjIiIGZpbGw9IiNmZmNjMDAiLz48cmVjdCB4PSIzNSIgeT0iOS41IiB3aWR0aD0iMzAiIGhlaWdodD0iNyIgZmlsbD0iIzAwMTUzMyIvPjx0ZXh0IHg9IjUwIiB5PSIxNC41IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBPTElDRSBCT1g8L3RleHQ+PHJlY3QgeD0iMzAiIHk9IjE2LjUiIHdpZHRoPSI0MCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48cmVjdCB4PSIzNCIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0NSIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI1NiIgeT0iMjEiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSIzNCIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0NSIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI1NiIgeT0iMzMiIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIGZpbGw9IiNkZGVlZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSI0MCIgeT0iNTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyOCIgZmlsbD0iIzhhOGE3NSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48cmVjdCB4PSI0MiIgeT0iNTIiIHdpZHRoPSI3IiBoZWlnaHQ9IjI0IiBmaWxsPSIjNzA3MDYwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMC41Ii8+PHJlY3QgeD0iNTEiIHk9IjUyIiB3aWR0aD0iNyIgaGVpZ2h0PSIyNCIgZmlsbD0iIzcwNzA2MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxyZWN0IHg9IjMwIiB5PSI4MC41IiB3aWR0aD0iNDAiIGhlaWdodD0iNiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==" type="image/svg+xml"/>
-<title>Dr. Way's T.A.R.D.I.S. 17</title>
+<title>Dr. Way's T.A.R.D.I.S.</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#f0f2f5;min-height:100vh}button{cursor:pointer;font-family:inherit}input,select,textarea{font-family:inherit;border:1px solid #ccc;border-radius:6px;padding:6px 10px;font-size:14px;width:100%}textarea{resize:vertical}
 .B{border-radius:8px;padding:8px 16px;font-size:14px;font-weight:600;border:2px solid transparent;cursor:pointer}.Bs{padding:4px 10px;font-size:12px;border-radius:8px;font-weight:600;border:2px solid transparent;cursor:pointer}
@@ -115,7 +115,7 @@ let S={unlocked:0,pw:"",tab:"today",tasks:[],rec:[],settings:{deviceName:"MyDevi
 cloLinks:[],wfLinks:[],rowLinks:[],throwLinks:[],bsLinks:[],learnLinks:[],petLinks:[],
 u:{ts:"tasks",cc:TD,tf:"All",cv:"dash",cx:null,wx:null,bt:"personal",sf:"All",rs:"gear",tw:"gear",bss:"checklist",bsx:null,pa:"pw",ps:"training",hs:"nutrition",lf:"All",ht:"bills",sc:0,ae:{},wk:"clo",lk:"grocery",sk:"rowing",mk:"learning",bf:"All",calView:"week"}};
 
-const KS=["tasks","rec","settings","calEv","icsEv","cloCats","wfP","exp","inc","jour","rGear","tGear","acr","bsG","bsP","bsPdf","pets","meals","wk","swk","gM","lP","subs","bills","maint","rem","pw","creds","houseCk","homeLinks","lastBillReset","morningCk","eveningCk","cloLinks","wfLinks","rowLinks","throwLinks","bsLinks","learnLinks","petLinks","rGearCk","tGearCk","bsGCk"];
+const KS=["tasks","rec","settings","calEv","icsEv","cloCats","wfP","exp","inc","jour","rGear","tGear","acr","bsG","bsP","bsPdf","pets","meals","wk","swk","gM","lP","subs","bills","maint","rem","pw","creds","houseCk","homeLinks","lastBillReset","morningCk","eveningCk","cloLinks","wfLinks","rowLinks","throwLinks","bsLinks","learnLinks","petLinks","rGearCk","tGearCk","bsGCk","acv","macroTargets"];
 let dragIdx=null;
 
 let deferredPrompt;
@@ -320,7 +320,7 @@ function inferBucket(s){
   if(/\b(throw|throwing|highland|hammer|caber|stone|games|athletics|workout|lift|run|swim|walk)\b/.test(t))return'Athletics';
   if(/\b(wilbur|simba|pet|dog|cat|vet|puppy|kitten|training|treat)\b/.test(t))return'Pets';
   if(/\b(home|house|yard|garage|kitchen|repair|maintenance|bill|grocery|groceries)\b/.test(t))return'Home';
-  if(/\b(learn|study|journal|book|article|class|course|read|language)\b/.test(t))return'Learning';
+  if(/\b(learn|study|journal|book|article|class|classes|course|read|language)\b/.test(t))return'Learning';
   return'Personal';
 }
 function detectIntent(t){
@@ -523,7 +523,6 @@ function DL(f){return $("🗑",f,"",{background:"none",border:"none",color:"#e74
 function AI(ph,fn){const i=ip("text","",()=>{},ph);let _busy=false;const go=()=>{if(_busy||!i.value.trim())return;_busy=true;fn(i.value.trim());i.value='';R();};i.addEventListener("keydown",e=>{if(e.key==="Enter")go();});return h("div",{style:{display:"flex",gap:"6px",marginTop:"8px",width:"100%"}},[i,$("+",go,"Bs Bp")]);}
 function ED(txt,onSave){const sp=h("span",{class:"editable",style:{flex:"1",fontSize:"13px"}},[txt]);sp.onclick=()=>{const inp=h("input",{type:"text",value:txt,style:{flex:"1",fontSize:"13px",border:"1px solid #003B6F",borderRadius:"4px",padding:"4px"}});inp.onblur=()=>{if(inp.value.trim()&&inp.value!==txt){onSave(inp.value.trim());}else{sp.textContent=txt;inp.replaceWith(sp);}};inp.onkeydown=e=>{if(e.key==="Enter"){inp.blur();}else if(e.key==="Escape"){sp.textContent=txt;inp.replaceWith(sp);}};sp.replaceWith(inp);inp.focus();inp.select();};return sp;}
 function gearL(w,g,set,lb,ckKey){
-  // ckKey is the S[] key where we store checked state e.g. "rGearCk"
   if(!S[ckKey])S[ckKey]={};
   const ck=S[ckKey];
   const c=C([]);
@@ -533,11 +532,9 @@ function gearL(w,g,set,lb,ckKey){
   c.appendChild(hdr);
   (g||[]).forEach((it,i)=>{
     const checked=!!ck[i];
-    const row=h("div",{style:{display:"flex",alignItems:"center",gap:"6px",padding:"5px 0",borderBottom:"1px solid #eee",width:"100%"}});
-    const cb=CK(checked,()=>{ck[i]=!ck[i];sv();R();});
-    const lbl=h("span",{style:{flex:"1",fontSize:"13px",textDecoration:checked?"line-through":"none",color:checked?"#aaa":"inherit"}},[it]);
-    row.appendChild(cb);
-    row.appendChild(lbl);
+    const row=h("div",{style:{display:"grid",gridTemplateColumns:"auto 1fr auto auto",gap:"8px",alignItems:"center",padding:"6px 0",borderBottom:"1px solid #eee",width:"100%"}});
+    row.appendChild(CK(checked,()=>{ck[i]=!ck[i];sv();R();}));
+    row.appendChild(h("span",{style:{fontSize:"13px",textDecoration:checked?"line-through":"none",color:checked?"#aaa":"inherit"}},[it]));
     row.appendChild($("✏️",()=>{const v=prompt("Edit:",it);if(v!=null){const a=[...g];a[i]=v;set(a);sv();R();}},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}));
     row.appendChild(DL(()=>{set(g.filter((_,j)=>j!==i));sv();R();}));
     c.appendChild(row);
@@ -796,11 +793,94 @@ function rHouseCk(w){const ck=S.houseCk||[];const dn=ck.filter(i=>i.done).length
 function rSH(w){w.appendChild(SB([["rowing","🚣 Rowing"],["throwing","🏋️ Throwing"],["nut","🥗 Nutrition"],["wk","💪 Workouts"]],S.u.sk,v=>{S.u.sk=v;R();}));
   if(S.u.sk==="rowing"){w.appendChild(SB([["gear","⚓ Gear"],["acr","🎯 ACR"],["links","🔗 Links"]],S.u.rs,v=>{S.u.rs=v;R();}));if(S.u.rs==="gear")gearL(w,S.rGear,v=>{S.rGear=v;sv();},"🚣 Rowing Gear","rGearCk");else if(S.u.rs==="links")linksSec(w,"rowLinks","🔗 Rowing Custom Links");else acrV(w,(S.acr||[]).filter(a=>!a.s.startsWith("Highland")));
   }else if(S.u.sk==="throwing"){w.appendChild(SB([["gear","🏋️ Gear"],["hg","⚔️ Highland Games"],["links","🔗 Links"]],S.u.tw,v=>{S.u.tw=v;R();}));if(S.u.tw==="gear")gearL(w,S.tGear,v=>{S.tGear=v;sv();},"🏋️ Throwing Gear","tGearCk");else if(S.u.tw==="links")linksSec(w,"throwLinks","🔗 Throwing Custom Links");else acrV(w,(S.acr||[]).filter(a=>a.s.startsWith("Highland")));
-  }else if(S.u.sk==="nut"){const tip=C([],{background:"#f0f4ff",padding:"8px 12px"});tip.innerHTML='<div style="font-size:12px;color:'+P+'">💡 <a href="https://cronometer.com" target="_blank" style="color:'+P+'"><strong>Open Cronometer →</strong></a></div>';w.appendChild(tip);
-    const tm=(S.meals||[]).filter(m=>m.date===TD),tot=tm.reduce((s,m)=>({cal:s.cal+Number(m.cal||0),pro:s.pro+Number(m.pro||0),carbs:s.carbs+Number(m.carbs||0),fat:s.fat+Number(m.fat||0)}),{cal:0,pro:0,carbs:0,fat:0});
-    const sg=h("div",{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"8px",textAlign:"center"}});[["Cal",tot.cal,"#e74c3c"],["Pro",tot.pro+"g","#2980b9"],["Carbs",tot.carbs+"g","#f39c12"],["Fat",tot.fat+"g","#8e44ad"]].forEach(([l,v,c])=>sg.appendChild(h("div",{style:{background:"#fff",borderRadius:"8px",padding:"8px"}},[h("div",{style:{fontSize:"20px",fontWeight:"700",color:c}},[String(v)]),h("div",{style:{fontSize:"11px",color:"#666"}},[l])])));w.appendChild(C([sg],{background:"#f0fff4"}));
-    const f={name:"",cal:"",pro:"",carbs:"",fat:""};w.appendChild(C([ip("text","",v=>f.name=v,"Meal"),h("div",{class:"g2",style:{marginTop:"8px"}},[ip("number","",v=>f.cal=v,"Cal"),ip("number","",v=>f.pro=v,"Protein g"),ip("number","",v=>f.carbs=v,"Carbs g"),ip("number","",v=>f.fat=v,"Fat g")]),$("Log",()=>{if(!f.name)return;S.meals.unshift({...f,id:uid(),date:TD,created:TD});sv();R();},"B Bp",{marginTop:"8px"})]));
-    tm.forEach(m=>{w.appendChild(C([h("div",{style:{display:"flex",justifyContent:"space-between",width:"100%"}},[h("strong",{},[m.name||""]),h("div",{style:{display:"flex",gap:"8px",alignItems:"center"}},[$("✏️",()=>{const mf={name:m.name,cal:m.cal||"",pro:m.pro||"",carbs:m.carbs||"",fat:m.fat||""};const mm=ml("Edit Meal",h("div",{style:{display:"flex",flexDirection:"column",gap:"8px"}},[ip("text",m.name,v=>mf.name=v,"Meal"),h("div",{class:"g2"},[ip("number",m.cal||"",v=>mf.cal=v,"Cal"),ip("number",m.pro||"",v=>mf.pro=v,"Protein g"),ip("number",m.carbs||"",v=>mf.carbs=v,"Carbs g"),ip("number",m.fat||"",v=>mf.fat=v,"Fat g")]),$("Save",()=>{m.name=mf.name;m.cal=mf.cal;m.pro=mf.pro;m.carbs=mf.carbs;m.fat=mf.fat;m.lastEdited=TD;sv();mm.remove();R();},"B Bp")]));},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}),h("span",{style:{fontSize:"12px",color:"#666"}},[[m.cal&&m.cal+"cal",m.pro&&m.pro+"g"].filter(Boolean).join(" · ")]),DL(()=>{S.meals=S.meals.filter(x=>x.id!==m.id);sv();R();})])])],{padding:"10px"}));});
+  }else if(S.u.sk==="nut"){
+    const tip=C([],{background:"#f0f4ff",padding:"8px 12px"});tip.innerHTML='<div style="font-size:12px;color:'+P+'">💡 <a href="https://cronometer.com" target="_blank" style="color:'+P+'"><strong>Open Cronometer →</strong></a></div>';w.appendChild(tip);
+
+    // ── Macro Targets ──
+    if(!S.macroTargets)S.macroTargets={cal:2000,pro:150,carbs:200,fat:65,fiber:25};
+    const mt=S.macroTargets;
+    const tgtC=C([],{background:"#f9f9f9"});
+    tgtC.appendChild(h("div",{style:{fontWeight:"700",fontSize:"13px",marginBottom:"8px",color:P}},["🎯 Daily Targets"]));
+    const tgtGrid=h("div",{style:{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:"6px",textAlign:"center"}});
+    [["cal","Cal","#e74c3c"],["pro","Protein","#2980b9"],["carbs","Carbs","#f39c12"],["fat","Fat","#8e44ad"],["fiber","Fiber","#27ae60"]].forEach(([k,l,c])=>{
+      const inp=h("input",{type:"number",style:{width:"100%",fontSize:"14px",fontWeight:"700",color:c,textAlign:"center",border:"1px solid #eee",borderRadius:"6px",padding:"4px"}});
+      inp.value=mt[k]||0;
+      inp.oninput=e=>{mt[k]=Number(e.target.value);S.macroTargets=mt;sv();};
+      tgtGrid.appendChild(h("div",{},[inp,h("div",{style:{fontSize:"10px",color:"#888",marginTop:"2px"}},[l+(k==="cal"?"":"g")])]));
+    });
+    tgtC.appendChild(tgtGrid);
+    w.appendChild(tgtC);
+
+    // ── Daily Totals + Progress ──
+    const tm=(S.meals||[]).filter(m=>m.date===TD);
+    const tot=tm.reduce((s,m)=>({cal:s.cal+Number(m.cal||0),pro:s.pro+Number(m.pro||0),carbs:s.carbs+Number(m.carbs||0),fat:s.fat+Number(m.fat||0),fiber:s.fiber+Number(m.fiber||0)}),{cal:0,pro:0,carbs:0,fat:0,fiber:0});
+    const sg=h("div",{style:{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:"8px",textAlign:"center"}});
+    [["cal","Cal","#e74c3c"],["pro","Pro","#2980b9"],["carbs","Carbs","#f39c12"],["fat","Fat","#8e44ad"],["fiber","Fiber","#27ae60"]].forEach(([k,l,c])=>{
+      const pct=mt[k]?Math.min(Math.round(tot[k]/mt[k]*100),100):0;
+      const val=k==="cal"?tot[k]:tot[k]+"g";
+      const tgt=k==="cal"?mt[k]:mt[k]+"g";
+      sg.appendChild(h("div",{style:{background:"#fff",borderRadius:"8px",padding:"8px"}},[
+        h("div",{style:{fontSize:"18px",fontWeight:"700",color:c}},[String(val)]),
+        h("div",{style:{fontSize:"9px",color:"#888",marginBottom:"4px"}},[l+" / "+tgt]),
+        PB(pct,c)
+      ]));
+    });
+    w.appendChild(C([sg],{background:"#f0fff4"}));
+
+    // ── ACV Tracker ──
+    if(!S.acv)S.acv={am:false,pm:false};
+    const acvC=C([],{background:"#fff8e1"});
+    acvC.appendChild(h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"8px"}},[
+      h("div",{style:{fontWeight:"700",fontSize:"13px",color:"#b7770d"}},["🍎 Apple Cider Vinegar"]),
+      $("Reset",()=>{S.acv={am:false,pm:false};sv();R();},"Bs Bo")
+    ]));
+    const acvRow=h("div",{style:{display:"flex",gap:"24px",alignItems:"center"}});
+    ["am","pm"].forEach(t=>{
+      const lbl=h("div",{style:{display:"flex",alignItems:"center",gap:"8px",fontSize:"14px",fontWeight:"600"}});
+      const cb=CK(S.acv[t],()=>{S.acv[t]=!S.acv[t];sv();R();});
+      lbl.appendChild(cb);
+      lbl.appendChild(h("span",{},[t==="am"?"☀️ Morning":"🌙 Evening"]));
+      acvRow.appendChild(lbl);
+    });
+    acvC.appendChild(acvRow);
+    w.appendChild(acvC);
+
+    // ── Log Meal ──
+    const f={name:"",cal:"",pro:"",carbs:"",fat:"",fiber:""};
+    w.appendChild(C([
+      ip("text","",v=>f.name=v,"Meal name"),
+      h("div",{class:"g2",style:{marginTop:"8px"}},[
+        ip("number","",v=>f.cal=v,"Cal"),
+        ip("number","",v=>f.pro=v,"Protein g"),
+        ip("number","",v=>f.carbs=v,"Carbs g"),
+        ip("number","",v=>f.fat=v,"Fat g"),
+        ip("number","",v=>f.fiber=v,"Fiber g")
+      ]),
+      $("Log",()=>{if(!f.name)return;S.meals.unshift({...f,id:uid(),date:TD,created:TD});sv();R();},"B Bp",{marginTop:"8px"})
+    ]));
+
+    // ── Meal Log ──
+    tm.forEach(m=>{w.appendChild(C([h("div",{style:{display:"flex",justifyContent:"space-between",width:"100%"}},[
+      h("div",{},[
+        h("strong",{},[m.name||""]),
+        h("div",{style:{fontSize:"11px",color:"#666",marginTop:"2px"}},[[m.cal&&m.cal+"cal",m.pro&&m.pro+"g pro",m.carbs&&m.carbs+"g carbs",m.fat&&m.fat+"g fat",m.fiber&&m.fiber+"g fiber"].filter(Boolean).join(" · ")])
+      ]),
+      h("div",{style:{display:"flex",gap:"4px",alignItems:"center"}},[$("✏️",()=>{
+        const mf={name:m.name,cal:m.cal||"",pro:m.pro||"",carbs:m.carbs||"",fat:m.fat||"",fiber:m.fiber||""};
+        const mm=ml("Edit Meal",h("div",{style:{display:"flex",flexDirection:"column",gap:"8px"}},[
+          ip("text",m.name,v=>mf.name=v,"Meal"),
+          h("div",{class:"g2"},[
+            ip("number",m.cal||"",v=>mf.cal=v,"Cal"),
+            ip("number",m.pro||"",v=>mf.pro=v,"Protein g"),
+            ip("number",m.carbs||"",v=>mf.carbs=v,"Carbs g"),
+            ip("number",m.fat||"",v=>mf.fat=v,"Fat g"),
+            ip("number",m.fiber||"",v=>mf.fiber=v,"Fiber g")
+          ]),
+          $("Save",()=>{m.name=mf.name;m.cal=mf.cal;m.pro=mf.pro;m.carbs=mf.carbs;m.fat=mf.fat;m.fiber=mf.fiber;m.lastEdited=TD;sv();mm.remove();R();},"B Bp")
+        ]));
+      },"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}),
+      DL(()=>{S.meals=S.meals.filter(x=>x.id!==m.id);sv();R();})])
+    ])],{padding:"10px"}));});
   }else{const tip=C([],{background:"#f0f4ff",padding:"8px 12px"});tip.innerHTML='<div style="font-size:12px;color:'+P+'">💡 <a href="https://truecoach.co" target="_blank" style="color:'+P+'"><strong>Open TrueCoach →</strong></a></div>';w.appendChild(tip);
     w.appendChild(H("Schedule",[$("+ Schedule",()=>{const f={type:"Walk",dur:"",unit:"min",date:TD,time:""};const m=ml("Schedule Workout",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[FL("Type",sl("Walk",v=>f.type=v,WT)),h("div",{class:"g2"},[FL("Duration",ip("number","",v=>f.dur=v,"30")),FL("Unit",sl("min",v=>f.unit=v,["min","mi"]))]),h("div",{class:"g2"},[FL("Date",ip("date",TD,v=>f.date=v)),FL("Time",ip("time","",v=>f.time=v))]),$("Schedule",()=>{if(!S.swk)S.swk=[];S.swk.push({id:uid(),...f,done:0,created:TD});sv();m.remove();R();},"B Bp")]));},"Bs Bp")]));
     (S.swk||[]).filter(x=>x.date>=TD).sort((a,b)=>a.date.localeCompare(b.date)).forEach(x=>{w.appendChild(C([h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",width:"100%"}},[h("div",{},[h("strong",{},[x.type||""]),h("div",{style:{fontSize:"12px",color:"#666"}},[fmt(x.date)+(x.time?" · "+x.time:"")+(x.dur?" · "+x.dur+(x.unit==="mi"?"mi":"min"):"")])]),h("div",{style:{display:"flex",gap:"4px"}},[$("✏️",()=>{const xf={type:x.type,dur:x.dur||"",unit:x.unit||"min",date:x.date,time:x.time||""};const xm=ml("Edit Workout",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[FL("Type",sl(x.type,v=>xf.type=v,WT)),h("div",{class:"g2"},[FL("Duration",ip("number",x.dur||"",v=>xf.dur=v,"30")),FL("Unit",sl(x.unit||"min",v=>xf.unit=v,["min","mi"]))]),h("div",{class:"g2"},[FL("Date",ip("date",x.date,v=>xf.date=v)),FL("Time",ip("time",x.time||"",v=>xf.time=v))]),$("Save",()=>{x.type=xf.type;x.dur=xf.dur;x.unit=xf.unit;x.date=xf.date;x.time=xf.time;x.lastEdited=TD;sv();xm.remove();R();},"B Bp")]));},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}),x.done?bg("✓","#27ae60"):$("Done",()=>{x.done=1;sv();R();},"Bs Bg"),DL(()=>{S.swk=S.swk.filter(y=>y.id!==x.id);sv();R();})])])],{padding:"10px"}));});
@@ -809,7 +889,7 @@ function rSH(w){w.appendChild(SB([["rowing","🚣 Rowing"],["throwing","🏋️ 
 
 // ── Mind ──────────────────────────────────────────────────────────────────────
 function rMind(w){w.appendChild(SB([["learn","📚 Learning"],["stories","📖 Stories"]],S.u.mk,v=>{S.u.mk=v;R();}));if(S.u.mk==="learn"){rLn(w);}else{rSt(w);}}
-function rLn(w){const CATS=["Journal Article","Drawing","Languages","Neuroscience"];w.appendChild(H("📚 Learning",[$("+ Project",()=>{const f={title:"",cat:"Journal Article",stage:"Not Started",notes:"",dueDate:""};const m=ml("Add Project",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text","",v=>f.title=v,"Title"),h("div",{class:"g2"},[sl("Journal Article",v=>f.cat=v,CATS),sl("Not Started",v=>f.stage=v,ST)]),ip("date","",v=>f.dueDate=v,"Due Date (optional)"),ta("",v=>f.notes=v,"Notes...",2),$("Add",()=>{if(!f.title.trim())return;S.lP.push({id:uid(),...f,date:TD});sv();m.remove();R();},"B Bp")]));},"Bs Bp")]));
+function rLn(w){const CATS=["Journal Article","Drawing","Languages","Neuroscience","Classes"];w.appendChild(H("📚 Learning",[$("+ Project",()=>{const f={title:"",cat:"Journal Article",stage:"Not Started",notes:"",dueDate:""};const m=ml("Add Project",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text","",v=>f.title=v,"Title"),h("div",{class:"g2"},[sl("Journal Article",v=>f.cat=v,CATS),sl("Not Started",v=>f.stage=v,ST)]),ip("date","",v=>f.dueDate=v,"Due Date (optional)"),ta("",v=>f.notes=v,"Notes...",2),$("Add",()=>{if(!f.title.trim())return;S.lP.push({id:uid(),...f,date:TD});sv();m.remove();R();},"B Bp")]));},"Bs Bp")]));
   w.appendChild(SB([["projects","📚 Projects"],["links","🔗 Links"]],S.u.lf==="links"?"links":"projects",v=>{S.u.lf=v;R();}));
   if(S.u.lf==="links"){linksSec(w,"learnLinks","🔗 Learning Custom Links");
   }else{(S.lP||[]).forEach(p=>{w.appendChild(C([h("div",{style:{display:"flex",justifyContent:"space-between",width:"100%"}},[h("div",{},[h("strong",{},[p.title||""]),bg(p.cat||"","#8e44ad"),bg(p.stage||""),p.dueDate?h("span",{style:{fontSize:"11px",color:"#888",marginLeft:"8px"}},["📅"+fmt(p.dueDate)]):null]),h("div",{style:{display:"flex",gap:"4px"}},[$("✏️",()=>{const pf={title:p.title,cat:p.cat,stage:p.stage,notes:p.notes||"",dueDate:p.dueDate||""};const ntx=ta(p.notes||"",v=>pf.notes=v,"Notes...",2);ntx.style.width="100%";const pm=ml("Edit",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text",p.title,v=>pf.title=v,"Title"),h("div",{class:"g2"},[sl(p.cat,v=>pf.cat=v,CATS),sl(p.stage,v=>pf.stage=v,ST)]),ip("date",p.dueDate||"",v=>pf.dueDate=v,"Due Date"),ntx,$("Save",()=>{p.title=pf.title;p.cat=pf.cat;p.stage=pf.stage;p.notes=pf.notes;p.dueDate=pf.dueDate;p.lastEdited=TD;sv();pm.remove();R();},"B Bp")]));},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}),DL(()=>{S.lP=S.lP.filter(x=>x.id!==p.id);sv();R();})])])]));});

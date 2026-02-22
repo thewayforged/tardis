@@ -1,4 +1,4 @@
-const CACHE = 'tardis-v7'; // ← bump this number each time you deploy
+const CACHE = 'tardis-v7.5'; // ← bump this number each time you deploy
 const ASSETS = ['./', './index.html', './manifest.json', './icon.svg'];
 
 self.addEventListener('install', e => {

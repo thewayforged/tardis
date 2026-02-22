@@ -992,17 +992,17 @@ function rSet(w){w.appendChild(H("⚙️ Settings"));
           if(addedClo)stats['cloCats']=addedClo;
         }
 
-        // ACR: merge by id
+        // ACR: merge by name (s field) since ids are generated fresh per device
         if(Array.isArray(d.acr)&&d.acr.length){
-          const acrMap=new Map((S.acr||[]).map(a=>[a.id,a]));
+          const acrMap=new Map((S.acr||[]).map(a=>[a.s,a]));
           let addedAcr=0;
           d.acr.forEach(ia=>{
-            if(!ia.id)return;
-            if(acrMap.has(ia.id)){
-              const ea=acrMap.get(ia.id);
+            if(!ia.s)return;
+            if(acrMap.has(ia.s)){
+              const ea=acrMap.get(ia.s);
               ea.t=mergeById(ea.t,ia.t,'acrTasks');
               ea.n=mergeById(ea.n,ia.n,'acrNotes');
-            }else{acrMap.set(ia.id,ia);addedAcr++;}
+            }else{acrMap.set(ia.s,ia);addedAcr++;}
           });
           S.acr=Array.from(acrMap.values());
           if(addedAcr)stats['acrProjects']=addedAcr;
@@ -1046,6 +1046,10 @@ function rSet(w){w.appendChild(H("⚙️ Settings"));
         }
         if(d.macroTargets&&!S.macroTargets)S.macroTargets=d.macroTargets;
         if(d.acv&&!S.acv)S.acv=d.acv;
+
+        // Re-parse through JSON to ensure all imported objects are plain,
+        // fully-owned references (fixes edit/delete/check on imported items)
+        KS.forEach(k=>{try{S[k]=JSON.parse(JSON.stringify(S[k]));}catch(e){}});
 
         sv();R();
 

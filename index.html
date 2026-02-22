@@ -1065,7 +1065,53 @@ function rSet(w){w.appendChild(H("⚙️ Settings"));
   };
 
   dc.appendChild($("⬆️ Import",()=>fi.click(),"B Bg"));dc.appendChild(fi);dc.appendChild(h("div",{style:{marginTop:"10px",fontSize:"13px",color:"#666"}},["Tasks: "+(S.tasks||[]).length+" · Recurring: "+(S.rec||[]).length+" · Journal: "+(S.jour||[]).length+" · Meals: "+(S.meals||[]).length]));w.appendChild(dc);
-  const dz=C([]);dz.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:"#e74c3c"}},["⚠️ Danger Zone"]));dz.appendChild($("Clear All Tasks",()=>{if(confirm("Clear ALL tasks?"))S.tasks=[];sv();R();},"B Bd"));w.appendChild(dz);}
+  // ── Search & Delete ──
+  const sd=C([],{borderLeft:"4px solid #e74c3c"});
+  sd.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:"#e74c3c"}},["🔍 Find & Delete Item"]));
+  sd.appendChild(h("div",{style:{fontSize:"12px",color:"#555",marginBottom:"8px"}},["Searches all sections (tasks, recurring, CLO, ACR, learning, etc.) by title/text."]));
+  const sri=ip("text","",()=>{},"Search title...");
+  const srOut=h("div",{style:{marginTop:"8px"}});
+  sd.appendChild(h("div",{style:{display:"flex",gap:"8px"}},[sri,$("Search",()=>{
+    const q=sri.value.trim().toLowerCase();
+    srOut.innerHTML="";
+    if(!q)return;
+    const hits=[];
+    // tasks
+    (S.tasks||[]).forEach(t=>{if((t.title||"").toLowerCase().includes(q))hits.push({label:"Task: "+t.title,del:()=>{S.tasks=S.tasks.filter(x=>x.id!==t.id);}});});
+    // recurring
+    (S.rec||[]).forEach(t=>{if((t.title||"").toLowerCase().includes(q))hits.push({label:"Recurring: "+t.title,del:()=>{S.rec=S.rec.filter(x=>x.id!==t.id);}});});
+    // calEv
+    (S.calEv||[]).forEach(t=>{if((t.title||"").toLowerCase().includes(q))hits.push({label:"Cal Event: "+t.title,del:()=>{S.calEv=S.calEv.filter(x=>x.id!==t.id);}});});
+    // CLO
+    (S.cloCats||[]).forEach(c=>{
+      (c.tasks||[]).forEach(t=>{if((t.title||"").toLowerCase().includes(q))hits.push({label:"CLO ["+c.name+"]: "+t.title,del:()=>{c.tasks=c.tasks.filter(x=>x.id!==t.id);}});});
+      (c.subs||[]).forEach(s=>(s.tasks||[]).forEach(t=>{if((t.title||t.text||"").toLowerCase().includes(q))hits.push({label:"CLO Sub ["+s.name+"]: "+(t.title||t.text),del:()=>{s.tasks=s.tasks.filter(x=>x.id!==t.id);}});}));
+    });
+    // ACR
+    (S.acr||[]).forEach(a=>(a.t||[]).forEach(t=>{if((t.title||"").toLowerCase().includes(q))hits.push({label:"ACR ["+a.s+"]: "+t.title,del:()=>{a.t=a.t.filter(x=>x.id!==t.id);}});}));
+    // WF projects
+    (S.wfP||[]).forEach(p=>(p.tasks||[]).forEach(t=>{if((t.title||"").toLowerCase().includes(q))hits.push({label:"WF ["+p.title+"]: "+t.title,del:()=>{p.tasks=p.tasks.filter(x=>x.id!==t.id);}});}));
+    // Learning
+    (S.lP||[]).forEach(p=>{if((p.title||"").toLowerCase().includes(q))hits.push({label:"Learning: "+p.title,del:()=>{S.lP=S.lP.filter(x=>x.id!==p.id);}});});
+    // Blacksmith projects
+    (S.bsP||[]).forEach(p=>{if((p.name||"").toLowerCase().includes(q))hits.push({label:"Blacksmith: "+p.name,del:()=>{S.bsP=S.bsP.filter(x=>x.id!==p.id);}});});
+    // Maintenance
+    (S.maint||[]).forEach(t=>{if((t.task||"").toLowerCase().includes(q))hits.push({label:"Maint: "+t.task,del:()=>{S.maint=S.maint.filter(x=>x.id!==t.id);}});});
+    // Pets training
+    (S.pets||[]).forEach(p=>(p.tr||[]).forEach(t=>{if((t.text||"").toLowerCase().includes(q))hits.push({label:"Pet ["+p.name+"] Training: "+t.text,del:()=>{p.tr=p.tr.filter(x=>x.id!==t.id);}});}));
+    // Journal
+    (S.jour||[]).forEach(t=>{if((t.title||t.content||"").toLowerCase().includes(q))hits.push({label:"Journal: "+(t.title||t.content.slice(0,40)),del:()=>{S.jour=S.jour.filter(x=>x.id!==t.id);}});});
+
+    if(!hits.length){srOut.appendChild(h("div",{style:{color:"#aaa",fontSize:"13px"}},["No matches found."]));return;}
+    hits.forEach(hit=>{
+      const row=h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"6px 0",borderBottom:"1px solid #eee",fontSize:"13px"}});
+      row.appendChild(h("span",{style:{flex:"1",color:"#333"}},[hit.label]));
+      row.appendChild($("🗑 Delete",()=>{if(confirm("Delete: "+hit.label+"?")){hit.del();sv();srOut.removeChild(row);R();}},"Bs Bd"));
+      srOut.appendChild(row);
+    });
+  },"Bs Bp")]));
+  sd.appendChild(srOut);
+  w.appendChild(sd);const dz=C([]);dz.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:"#e74c3c"}},["⚠️ Danger Zone"]));dz.appendChild($("Clear All Tasks",()=>{if(confirm("Clear ALL tasks?"))S.tasks=[];sv();R();},"B Bd"));w.appendChild(dz);}
 
 ld().then(()=>R());
 </script></body></html>

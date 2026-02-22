@@ -58,7 +58,7 @@
 
 <script>
 // ── PWA: Register Service Worker ─────────────────────────────────────────────
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && location.protocol !== 'about:' && location.hostname !== '') {
   navigator.serviceWorker.register('./sw.js').then(reg => {
     console.log('SW registered', reg.scope);
     reg.addEventListener('updatefound', () => {
@@ -72,7 +72,10 @@ if ('serviceWorker' in navigator) {
         }
       });
     });
-  }).catch(e => console.warn('SW failed:', e));
+  }).catch(e => {
+    // SW requires https:// or localhost — safe to ignore in preview/sandbox environments
+    if (e.name !== 'SecurityError') console.warn('SW failed:', e);
+  });
 }
 
 const P="#003B6F",PL="#004F9A",GL="#C9A84C",TD=new Date().toISOString().slice(0,10),uid=()=>Math.random().toString(36).slice(2,9),fmt=d=>d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"",fm$=n=>"$"+Number(n||0).toFixed(2);
@@ -141,7 +144,6 @@ function startVoice(){
   voiceFinalText='';
   if(voiceSilenceTimer){clearTimeout(voiceSilenceTimer);voiceSilenceTimer=null;}
 
-  // iOS Safari does not support continuous:true reliably — use single-shot mode
   voiceRec=new SR();
   voiceRec.continuous=!isIOS;
   voiceRec.interimResults=!isIOS;
@@ -176,7 +178,6 @@ function startVoice(){
       setVoiceStatus('Processing…');
       processVoiceCommand(spoken.trim());
     }else{
-      // On iOS, if nothing captured, show helpful message
       if(isIOS){setVoiceStatus('Nothing heard. Make sure microphone is allowed in Settings → Safari → Microphone, then tap 🎙️ again.');}
       else{setVoiceStatus('Nothing heard. Tap 🎙️ to try again.');}
     }
@@ -670,7 +671,6 @@ function editRecModal(r){
       r.startTime=f.startTime;
       r.priority=f.priority;
       r.bucket=f.bucket;
-      // also update any spawned tasks that reference this recurring id
       (S.tasks||[]).filter(t=>t.rid===r.id).forEach(t=>{t.title=r.title;t.priority=r.priority;t.bucket=r.bucket;});
       sv();m.remove();R();
     },"B Bp")
@@ -796,7 +796,6 @@ function rSH(w){w.appendChild(SB([["rowing","🚣 Rowing"],["throwing","🏋️ 
   }else if(S.u.sk==="nut"){
     const tip=C([],{background:"#f0f4ff",padding:"8px 12px"});tip.innerHTML='<div style="font-size:12px;color:'+P+'">💡 <a href="https://cronometer.com" target="_blank" style="color:'+P+'"><strong>Open Cronometer →</strong></a></div>';w.appendChild(tip);
 
-    // ── Macro Targets ──
     if(!S.macroTargets)S.macroTargets={cal:2000,pro:150,carbs:200,fat:65,fiber:25};
     const mt=S.macroTargets;
     const tgtC=C([],{background:"#f9f9f9"});
@@ -811,7 +810,6 @@ function rSH(w){w.appendChild(SB([["rowing","🚣 Rowing"],["throwing","🏋️ 
     tgtC.appendChild(tgtGrid);
     w.appendChild(tgtC);
 
-    // ── Daily Totals + Progress ──
     const tm=(S.meals||[]).filter(m=>m.date===TD);
     const tot=tm.reduce((s,m)=>({cal:s.cal+Number(m.cal||0),pro:s.pro+Number(m.pro||0),carbs:s.carbs+Number(m.carbs||0),fat:s.fat+Number(m.fat||0),fiber:s.fiber+Number(m.fiber||0)}),{cal:0,pro:0,carbs:0,fat:0,fiber:0});
     const sg=h("div",{style:{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:"8px",textAlign:"center"}});
@@ -827,7 +825,6 @@ function rSH(w){w.appendChild(SB([["rowing","🚣 Rowing"],["throwing","🏋️ 
     });
     w.appendChild(C([sg],{background:"#f0fff4"}));
 
-    // ── ACV Tracker ──
     if(!S.acv)S.acv={am:false,pm:false};
     const acvC=C([],{background:"#fff8e1"});
     acvC.appendChild(h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"8px"}},[
@@ -845,7 +842,6 @@ function rSH(w){w.appendChild(SB([["rowing","🚣 Rowing"],["throwing","🏋️ 
     acvC.appendChild(acvRow);
     w.appendChild(acvC);
 
-    // ── Log Meal ──
     const f={name:"",cal:"",pro:"",carbs:"",fat:"",fiber:""};
     w.appendChild(C([
       ip("text","",v=>f.name=v,"Meal name"),
@@ -859,7 +855,6 @@ function rSH(w){w.appendChild(SB([["rowing","🚣 Rowing"],["throwing","🏋️ 
       $("Log",()=>{if(!f.name)return;S.meals.unshift({...f,id:uid(),date:TD,created:TD});sv();R();},"B Bp",{marginTop:"8px"})
     ]));
 
-    // ── Meal Log ──
     tm.forEach(m=>{w.appendChild(C([h("div",{style:{display:"flex",justifyContent:"space-between",width:"100%"}},[
       h("div",{},[
         h("strong",{},[m.name||""]),
@@ -913,7 +908,6 @@ function rBS(w){w.appendChild(H("🔨 Blacksmith",[$("+ Project",()=>{const f={n
 function rSet(w){w.appendChild(H("⚙️ Settings"));
   w.appendChild(C([h("div",{style:{fontWeight:"700",marginBottom:"8px"}},["Device Name"]),ip("text",S.settings.deviceName||"MyDevice",v=>{S.settings.deviceName=v;sv();})]));
 
-  // PWA Status card
   const pwac=C([],{background:"#f0f4ff"});pwac.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:P}},["📱 PWA Status"]));
   const swReady='serviceWorker' in navigator;
   const swSt=swReady?"✅ Service Worker active — app updates automatically when you push new code":"⚠️ Service Worker not supported in this browser";
@@ -936,10 +930,140 @@ function rSet(w){w.appendChild(H("⚙️ Settings"));
   },"Bs Bo"));
   if(S.u.sc){const d=h("div",{style:{marginTop:"10px",display:"flex",flexDirection:"column",gap:"8px"}});[["gmail1","Gmail Personal"],["gmail2","Gmail WF"],["gmail3","Gmail Academic"],["cronometer","Cronometer"],["truecoach","TrueCoach"]].forEach(([k,l])=>{const row=h("div",{},[h("label",{class:"fl"},[l])]);const inp=ip("password","",()=>{},"••••••");inp.placeholder="Loading…";(async()=>{inp.value=S.creds[k]&&S._sessionPw?await dec(S.creds[k],S._sessionPw):'';inp.placeholder=l;})();inp.onchange=async()=>{if(inp.value&&S._sessionPw){S.creds[k]=await enc(inp.value,S._sessionPw);sv();}};row.appendChild(inp);d.appendChild(row);});d.appendChild(h("p",{style:{fontSize:"11px",color:"#888",margin:0}},["🔒 AES-256 encrypted. Only decryptable with your password."]));cc.appendChild(d);}w.appendChild(cc);
   const lc=C([]);lc.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px"}},["🔗 Quick Links"]));[["Gmail","https://mail.google.com"],["Google Calendar","https://calendar.google.com"],["Google Drive","https://drive.google.com"],["TrueCoach","https://truecoach.co"],["Cronometer","https://cronometer.com"]].forEach(([l,u])=>lc.appendChild(lr(l,u)));w.appendChild(lc);
-  const dc=C([]);dc.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px"}},["📦 Data – Export/Import"]));dc.appendChild(h("p",{style:{fontSize:"12px",color:"#555",margin:"0 0 10px"}},["Non-destructive import: keeps existing, adds new."]));
+  const dc=C([]);dc.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px"}},["📦 Data – Export/Import"]));dc.appendChild(h("p",{style:{fontSize:"12px",color:"#555",margin:"0 0 10px"}},["Non-destructive import: merges all data by ID, keeping existing items and adding new ones."]));
   dc.appendChild($("⬇️ Export",()=>{const d={};KS.forEach(k=>d[k]=S[k]);d.exportDate=new Date().toISOString();d.device=S.settings.deviceName;const a=document.createElement("a");a.href="data:application/json,"+encodeURIComponent(JSON.stringify(d,null,2));a.download="tardis-"+(S.settings.deviceName||"device")+"-"+TD+".json";a.click();},"B Bp",{marginRight:"8px"}));
-  const fi=h("input",{type:"file",style:{display:"none"}});fi.onchange=e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);let at=0;if(d.tasks){const mp=new Map((S.tasks||[]).map(x=>[x.id,x]));d.tasks.forEach(t=>{if(!mp.has(t.id)){mp.set(t.id,t);at++;}});S.tasks=Array.from(mp.values());}if(d.rec){const ids=new Set((S.rec||[]).map(x=>x.id));d.rec.filter(x=>!ids.has(x.id)).forEach(x=>{if(!S.rec)S.rec=[];S.rec.push(x);});}sv();R();alert("✅ Imported! "+at+" new tasks.");}catch{alert("Failed.");}};r.readAsText(file);};
-  dc.appendChild($("⬆️ Import",()=>fi.click(),"B Bg"));dc.appendChild(fi);dc.appendChild(h("div",{style:{marginTop:"10px",fontSize:"13px",color:"#666"}},["Tasks: "+(S.tasks||[]).length+" · Recurring: "+(S.rec||[]).length]));w.appendChild(dc);
+  const fi=h("input",{type:"file",style:{display:"none"}});
+
+  // ── Full non-destructive import ──────────────────────────────────────────
+  fi.onchange=e=>{
+    const file=e.target.files[0];if(!file)return;
+    const r=new FileReader();
+    r.onload=ev=>{
+      try{
+        const d=JSON.parse(ev.target.result);
+        const stats={};
+
+        // Helper: merge array by id, keeping existing, appending new
+        function mergeById(existing,incoming,label){
+          if(!Array.isArray(incoming)||!incoming.length)return existing||[];
+          const map=new Map((existing||[]).map(x=>[x.id,x]));
+          let added=0;
+          incoming.forEach(x=>{if(x.id&&!map.has(x.id)){map.set(x.id,x);added++;}});
+          if(added)stats[label]=(stats[label]||0)+added;
+          return Array.from(map.values());
+        }
+
+        // Simple arrays with .id
+        S.tasks    = mergeById(S.tasks,   d.tasks,    'tasks');
+        S.rec      = mergeById(S.rec,     d.rec,      'recurring');
+        S.calEv    = mergeById(S.calEv,   d.calEv,    'calEvents');
+        S.icsEv    = mergeById(S.icsEv,   d.icsEv,    'icsEvents');
+        S.wfP      = mergeById(S.wfP,     d.wfP,      'wfProjects');
+        S.jour     = mergeById(S.jour,    d.jour,     'journal');
+        S.meals    = mergeById(S.meals,   d.meals,    'meals');
+        S.wk       = mergeById(S.wk,      d.wk,       'workouts');
+        S.swk      = mergeById(S.swk,     d.swk,      'scheduledWorkouts');
+        S.gM       = mergeById(S.gM,      d.gM,       'grocery');
+        S.lP       = mergeById(S.lP,      d.lP,       'learningProjects');
+        S.bsP      = mergeById(S.bsP,     d.bsP,      'bsProjects');
+        S.bills    = mergeById(S.bills,   d.bills,    'bills');
+        S.maint    = mergeById(S.maint,   d.maint,    'maintenance');
+        S.rem      = mergeById(S.rem,     d.rem,      'reminders');
+        S.subs     = mergeById(S.subs,    d.subs,     'subscriptions');
+        S.morningCk= mergeById(S.morningCk,d.morningCk,'morningChecklist');
+        S.eveningCk= mergeById(S.eveningCk,d.eveningCk,'eveningChecklist');
+        S.houseCk  = mergeById(S.houseCk, d.houseCk,  'houseChecklist');
+
+        // CLO categories: merge by id, then merge tasks/subs inside each
+        if(Array.isArray(d.cloCats)&&d.cloCats.length){
+          const cloMap=new Map((S.cloCats||[]).map(c=>[c.id,c]));
+          let addedClo=0;
+          d.cloCats.forEach(ic=>{
+            if(!ic.id)return;
+            if(cloMap.has(ic.id)){
+              // merge tasks and subs within existing category
+              const ec=cloMap.get(ic.id);
+              ec.tasks=mergeById(ec.tasks,ic.tasks,'cloTasks');
+              if(Array.isArray(ic.subs))ic.subs.forEach(isub=>{
+                const esub=(ec.subs||[]).find(s=>s.id===isub.id);
+                if(esub){esub.tasks=mergeById(esub.tasks,isub.tasks,'cloSubTasks');}
+                else{if(!ec.subs)ec.subs=[];ec.subs.push(isub);addedClo++;}
+              });
+            }else{cloMap.set(ic.id,ic);addedClo++;}
+          });
+          S.cloCats=Array.from(cloMap.values());
+          if(addedClo)stats['cloCats']=addedClo;
+        }
+
+        // ACR: merge by id
+        if(Array.isArray(d.acr)&&d.acr.length){
+          const acrMap=new Map((S.acr||[]).map(a=>[a.id,a]));
+          let addedAcr=0;
+          d.acr.forEach(ia=>{
+            if(!ia.id)return;
+            if(acrMap.has(ia.id)){
+              const ea=acrMap.get(ia.id);
+              ea.t=mergeById(ea.t,ia.t,'acrTasks');
+              ea.n=mergeById(ea.n,ia.n,'acrNotes');
+            }else{acrMap.set(ia.id,ia);addedAcr++;}
+          });
+          S.acr=Array.from(acrMap.values());
+          if(addedAcr)stats['acrProjects']=addedAcr;
+        }
+
+        // Pets: merge appointments, training, games by id within each pet
+        if(Array.isArray(d.pets)&&d.pets.length){
+          d.pets.forEach(ip=>{
+            const ep=(S.pets||[]).find(p=>p.id===ip.id);
+            if(ep){
+              ep.ap=mergeById(ep.ap,ip.ap,'petAppts');
+              ep.tr=mergeById(ep.tr,ip.tr,'petTraining');
+              ep.gm=mergeById(ep.gm,ip.gm,'petGames');
+            }
+          });
+        }
+
+        // Expenses: merge personal and wayForged sub-arrays
+        if(d.exp){
+          if(!S.exp)S.exp={personal:[],wayForged:[]};
+          S.exp.personal =mergeById(S.exp.personal, d.exp.personal, 'expPersonal');
+          S.exp.wayForged=mergeById(S.exp.wayForged,d.exp.wayForged,'expWayForged');
+        }
+
+        // Gear arrays (plain strings, not objects — just replace if import has more)
+        ['rGear','tGear','bsG'].forEach(k=>{
+          if(Array.isArray(d[k])&&d[k].length>((S[k]||[]).length)){
+            S[k]=d[k];stats[k]='replaced';
+          }
+        });
+
+        // Link arrays (id-based)
+        ['homeLinks','cloLinks','wfLinks','rowLinks','throwLinks','bsLinks','learnLinks','petLinks'].forEach(k=>{
+          S[k]=mergeById(S[k],d[k],k);
+        });
+
+        // Scalar / object fields: only import if current value is empty/default
+        if(d.inc){
+          if(!S.inc.personal||S.inc.personal===0)S.inc.personal=d.inc.personal||0;
+          if(!S.inc.wayForged||S.inc.wayForged===0)S.inc.wayForged=d.inc.wayForged||0;
+        }
+        if(d.macroTargets&&!S.macroTargets)S.macroTargets=d.macroTargets;
+        if(d.acv&&!S.acv)S.acv=d.acv;
+
+        sv();R();
+
+        const summary=Object.entries(stats).map(([k,v])=>k+': '+v).join('\n') || 'Nothing new to add.';
+        alert('✅ Import complete!\n\n'+summary);
+      }catch(err){
+        console.error('Import error:',err);
+        alert('❌ Import failed: '+err.message);
+      }
+    };
+    r.readAsText(file);
+    fi.value=''; // reset so same file can be re-imported if needed
+  };
+
+  dc.appendChild($("⬆️ Import",()=>fi.click(),"B Bg"));dc.appendChild(fi);dc.appendChild(h("div",{style:{marginTop:"10px",fontSize:"13px",color:"#666"}},["Tasks: "+(S.tasks||[]).length+" · Recurring: "+(S.rec||[]).length+" · Journal: "+(S.jour||[]).length+" · Meals: "+(S.meals||[]).length]));w.appendChild(dc);
   const dz=C([]);dz.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:"#e74c3c"}},["⚠️ Danger Zone"]));dz.appendChild($("Clear All Tasks",()=>{if(confirm("Clear ALL tasks?"))S.tasks=[];sv();R();},"B Bd"));w.appendChild(dz);}
 
 ld().then(()=>R());

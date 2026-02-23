@@ -704,35 +704,6 @@ function toggleTaskComplete(t){
   else if(src.stage!==undefined)src.stage=src.stage==="Complete"?"Not Started":"Complete";
   sv();R();
 }
-  // ── STEP 1: Add this new function anywhere before tC() ──────────────────────
-function deleteTask(t){
-  if(!t.id)return;
-  const id=t.id;
-  if((S.tasks||[]).some(x=>x.id===id)){S.tasks=S.tasks.filter(x=>x.id!==id);sv();R();return;}
-  for(const c of(S.cloCats||[])){
-    if((c.tasks||[]).some(x=>x.id===id)){c.tasks=c.tasks.filter(x=>x.id!==id);sv();R();return;}
-    for(const sub of(c.subs||[])){
-      if((sub.tasks||[]).some(x=>x.id===id)){sub.tasks=sub.tasks.filter(x=>x.id!==id);sv();R();return;}
-    }
-  }
-  for(const p of(S.wfP||[])){
-    if((p.tasks||[]).some(x=>x.id===id)){p.tasks=p.tasks.filter(x=>x.id!==id);sv();R();return;}
-  }
-  for(const a of(S.acr||[])){
-    if((a.t||[]).some(x=>x.id===id)){a.t=a.t.filter(x=>x.id!==id);sv();R();return;}
-  }
-  for(const p of(S.pets||[])){
-    if((p.tr||[]).some(x=>x.id===id)){p.tr=p.tr.filter(x=>x.id!==id);sv();R();return;}
-  }
-  if((S.maint||[]).some(x=>x.id===id)){S.maint=S.maint.filter(x=>x.id!==id);sv();R();return;}
-  if((S.lP||[]).some(x=>x.id===id)){S.lP=S.lP.filter(x=>x.id!==id);sv();R();return;}
-  for(const p of(S.lP||[])){
-    if((p.tasks||[]).some(x=>x.id===id)){p.tasks=p.tasks.filter(x=>x.id!==id);sv();R();return;}
-  }
-  for(const p of(S.bsP||[])){
-    if((p.tasks||[]).some(x=>x.id===id)){p.tasks=p.tasks.filter(x=>x.id!==id);sv();R();return;}
-  }
-  if((S.bsP||[]).some(x=>x.id===id)){S.bsP=S.bsP.filter(x=>x.id!==id);sv();R();return;}
 function tC(t){const taskTitle=t.title||t.text||t.task||t.name||"Untitled Task";
   const mainDiv=h("div",{style:{display:"grid",gridTemplateColumns:"auto 1fr auto",gap:"12px",alignItems:"start",marginBottom:"6px",borderLeft:"4px solid "+(PC[t.priority]||"#888"),background:"#fff",borderRadius:"10px",padding:"12px",boxShadow:"0 1px 4px rgba(0,0,0,.06)"}});
   const isComplete=!!(t.completed||t.done||(t.status==="Complete")||(t.stage==="Complete"));
@@ -751,7 +722,7 @@ function tC(t){const taskTitle=t.title||t.text||t.task||t.name||"Untitled Task";
   const btnBox=h("div",{style:{display:"flex",gap:"4px",alignItems:"flex-start"}});
   if(t.notes){const nb=$("▼",()=>{const isOpen=notesDiv.style.display==="block";notesDiv.style.display=isOpen?"none":"block";nb.textContent=isOpen?"▼":"▲";},"",{background:"none",border:"none",cursor:"pointer",fontSize:"14px",padding:"0"});btnBox.appendChild(nb);}
   btnBox.appendChild($("✏️",()=>{const tf={title:taskTitle,priority:t.priority||"Medium",bucket:t.bucket||"Personal",stage:t.stage||"Not Started",startTime:t.startTime||"",dueDate:t.dueDate||"",notes:t.notes||""};const tm=ml("Edit Task",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text",taskTitle,v=>tf.title=v,"Title"),h("div",{class:"g2"},[FL("Priority",sl(t.priority||"Medium",v=>tf.priority=v,PR)),FL("Bucket",sl(t.bucket||"Personal",v=>tf.bucket=v,BK)),FL("Stage",sl(t.stage||"Not Started",v=>tf.stage=v,ST)),FL("Time",ip("time",t.startTime||"",v=>tf.startTime=v)),FL("Due",ip("date",t.dueDate||"",v=>tf.dueDate=v))]),ta(t.notes||"",v=>tf.notes=v,"Notes...",2),$("Save",()=>{if(t.title!==undefined)t.title=tf.title;else if(t.text!==undefined)t.text=tf.title;else if(t.task!==undefined)t.task=tf.title;else if(t.name!==undefined)t.name=tf.title;t.priority=tf.priority;t.bucket=tf.bucket;t.stage=tf.stage;t.startTime=tf.startTime;t.dueDate=tf.dueDate;t.notes=tf.notes;sv();tm.remove();R();},"B Bp")]));},"",{background:"none",border:"none",cursor:"pointer",color:P,fontSize:"12px"}));
-btnBox.appendChild(DL(()=>deleteTask(t)));
+  btnBox.appendChild(DL(()=>{if(t.id)S.tasks=S.tasks.filter(x=>x.id!==t.id);sv();R();}));
   mainDiv.appendChild(contentBox);mainDiv.appendChild(btnBox);return mainDiv;}
 
 // ── Calendar ──────────────────────────────────────────────────────────────────

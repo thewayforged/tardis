@@ -677,9 +677,37 @@ function addTM(){const f={title:"",priority:"Medium",bucket:"Personal",stage:"No
   const recStartRow=FL("Recurs from",ip("date",TD,v=>f.recStartDate=v));recStartRow.style.display="none";
   const recSel=sl("None",v=>{f.recurrence=v;recStartRow.style.display=v!=="None"?"block":"none";},[...RC]);
   const m=ml("Add Task",h("div",{style:{display:"flex",flexDirection:"column",gap:"10px"}},[ip("text","",v=>f.title=v,"Title"),h("div",{class:"g2"},[FL("Priority",sl("Medium",v=>f.priority=v,PR)),FL("Bucket",sl("Personal",v=>f.bucket=v,BK)),FL("Stage",sl("Not Started",v=>f.stage=v,ST)),FL("Recurrence",recSel),recStartRow,FL("Time",ip("time","",v=>f.startTime=v)),FL("Due",ip("date","",v=>f.dueDate=v))]),ta("",v=>f.notes=v,"Notes...",2),$("Add",()=>{if(_saved||!f.title.trim())return;_saved=true;const t={...f,id:uid(),completed:0,createdDate:f.recStartDate||TD};if(f.recurrence!=="None")S.rec.push({...t,id:uid()});S.tasks.push(t);sv();m.remove();R();},"B Bp")]));}
+function findSourceTask(t){
+  // Returns the live original object so mutations persist
+  if(t.id){
+    let found;
+    found=(S.tasks||[]).find(x=>x.id===t.id);if(found)return found;
+    for(const c of(S.cloCats||[])){
+      found=(c.tasks||[]).find(x=>x.id===t.id);if(found)return found;
+      for(const s of(c.subs||[])){found=(s.tasks||[]).find(x=>x.id===t.id);if(found)return found;}
+    }
+    for(const p of(S.wfP||[])){found=(p.tasks||[]).find(x=>x.id===t.id);if(found)return found;}
+    for(const a of(S.acr||[])){found=(a.t||[]).find(x=>x.id===t.id);if(found)return found;}
+    for(const p of(S.pets||[])){found=(p.tr||[]).find(x=>x.id===t.id);if(found)return found;}
+    found=(S.maint||[]).find(x=>x.id===t.id);if(found)return found;
+    for(const p of(S.lP||[])){found=p;if(p.id===t.id)return found;found=(p.tasks||[]).find(x=>x.id===t.id);if(found)return found;}
+    for(const p of(S.bsP||[])){found=(p.tasks||[]).find(x=>x.id===t.id);if(found)return found;}
+  }
+  return t;
+}
+function toggleTaskComplete(t){
+  const src=findSourceTask(t);
+  // different sources use different field names
+  if(src.completed!==undefined)src.completed=!src.completed;
+  else if(src.done!==undefined)src.done=src.done?0:1;
+  else if(src.status!==undefined)src.status=src.status==="Complete"?"Not Started":"Complete";
+  else if(src.stage!==undefined)src.stage=src.stage==="Complete"?"Not Started":"Complete";
+  sv();R();
+}
 function tC(t){const taskTitle=t.title||t.text||t.task||t.name||"Untitled Task";
   const mainDiv=h("div",{style:{display:"grid",gridTemplateColumns:"auto 1fr auto",gap:"12px",alignItems:"start",marginBottom:"6px",borderLeft:"4px solid "+(PC[t.priority]||"#888"),background:"#fff",borderRadius:"10px",padding:"12px",boxShadow:"0 1px 4px rgba(0,0,0,.06)"}});
-  mainDiv.appendChild(CK(t.completed,()=>{t.completed=!t.completed;sv();R();}));
+  const isComplete=!!(t.completed||t.done||(t.status==="Complete")||(t.stage==="Complete"));
+  mainDiv.appendChild(CK(isComplete,()=>toggleTaskComplete(t)));
   const contentBox=h("div");
   const titleDiv=h("div",{style:{display:"flex",alignItems:"center",gap:"8px",marginBottom:"6px"}});titleDiv.appendChild(ED(taskTitle,v=>{if(t.title!==undefined)t.title=v;else if(t.text!==undefined)t.text=v;else if(t.task!==undefined)t.task=v;else if(t.name!==undefined)t.name=v;sv();R();}));contentBox.appendChild(titleDiv);
   const badgeRow=h("div",{style:{display:"flex",gap:"4px",flexWrap:"wrap",marginBottom:"4px"}});

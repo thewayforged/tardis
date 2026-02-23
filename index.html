@@ -704,6 +704,35 @@ function toggleTaskComplete(t){
   else if(src.stage!==undefined)src.stage=src.stage==="Complete"?"Not Started":"Complete";
   sv();R();
 }
+  // ── STEP 1: Add this new function anywhere before tC() ──────────────────────
+function deleteTask(t){
+  if(!t.id)return;
+  const id=t.id;
+  if((S.tasks||[]).some(x=>x.id===id)){S.tasks=S.tasks.filter(x=>x.id!==id);sv();R();return;}
+  for(const c of(S.cloCats||[])){
+    if((c.tasks||[]).some(x=>x.id===id)){c.tasks=c.tasks.filter(x=>x.id!==id);sv();R();return;}
+    for(const sub of(c.subs||[])){
+      if((sub.tasks||[]).some(x=>x.id===id)){sub.tasks=sub.tasks.filter(x=>x.id!==id);sv();R();return;}
+    }
+  }
+  for(const p of(S.wfP||[])){
+    if((p.tasks||[]).some(x=>x.id===id)){p.tasks=p.tasks.filter(x=>x.id!==id);sv();R();return;}
+  }
+  for(const a of(S.acr||[])){
+    if((a.t||[]).some(x=>x.id===id)){a.t=a.t.filter(x=>x.id!==id);sv();R();return;}
+  }
+  for(const p of(S.pets||[])){
+    if((p.tr||[]).some(x=>x.id===id)){p.tr=p.tr.filter(x=>x.id!==id);sv();R();return;}
+  }
+  if((S.maint||[]).some(x=>x.id===id)){S.maint=S.maint.filter(x=>x.id!==id);sv();R();return;}
+  if((S.lP||[]).some(x=>x.id===id)){S.lP=S.lP.filter(x=>x.id!==id);sv();R();return;}
+  for(const p of(S.lP||[])){
+    if((p.tasks||[]).some(x=>x.id===id)){p.tasks=p.tasks.filter(x=>x.id!==id);sv();R();return;}
+  }
+  for(const p of(S.bsP||[])){
+    if((p.tasks||[]).some(x=>x.id===id)){p.tasks=p.tasks.filter(x=>x.id!==id);sv();R();return;}
+  }
+  if((S.bsP||[]).some(x=>x.id===id)){S.bsP=S.bsP.filter(x=>x.id!==id);sv();R();return;}
 function tC(t){const taskTitle=t.title||t.text||t.task||t.name||"Untitled Task";
   const mainDiv=h("div",{style:{display:"grid",gridTemplateColumns:"auto 1fr auto",gap:"12px",alignItems:"start",marginBottom:"6px",borderLeft:"4px solid "+(PC[t.priority]||"#888"),background:"#fff",borderRadius:"10px",padding:"12px",boxShadow:"0 1px 4px rgba(0,0,0,.06)"}});
   const isComplete=!!(t.completed||t.done||(t.status==="Complete")||(t.stage==="Complete"));

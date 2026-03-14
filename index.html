@@ -476,4 +476,12 @@ function rSet(w){w.appendChild(H("⚙️ Settings"));
   const dz=C([]);dz.appendChild(h("div",{style:{fontWeight:"700",marginBottom:"8px",color:"#e74c3c"}},["⚠️ Danger Zone"]));dz.appendChild($("Clear All Tasks",()=>{if(confirm("Clear ALL tasks?"))S.tasks=[];sv();R();},"B Bd"));w.appendChild(dz);}
 
 ld().then(()=>R());
-</script></body></html>
+</script>
+
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./sw.js')
+      .then(()=>console.log('SW registered'))
+      .catch(e=>console.log('SW error',e));
+  }
+</script>
+</body></html>
